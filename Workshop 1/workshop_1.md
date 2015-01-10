@@ -30,7 +30,9 @@ Let's get started.
 ## Install GitHub and Git Bash
 ### Mac OS X
 1. [Install GitHub for Mac](https://mac.github.com/)
-2. Install the Git [command line tools](https://github.com/blog/1510-installing-git-from-github-for-mac)
+2. If you have OS 10.8 or below, then you'll need to install the Git [command line tools](https://github.com/blog/1510-installing-git-from-github-for-mac). Not necessary for Mavericks (10.9) and above.
+3. Open the Terminal and check Git is installed by typing `git version`
+
 
 ### Windows
 1. [Install GitHub for Windows](https://windows.github.com/)
@@ -47,7 +49,7 @@ GitHub has a great interactive introduction to Git command line. To familiarize 
 You can find more detailed help about the basic Git commands being used [here](http://gitref.org/basic/).
 
 ## Basic Unix Directory Commands  
-Before we use Git locally on our own files, we should review a few Unix commands that are necessary for navigating through files and directories (aka the "file system").
+Before we use Git locally on our own files, we should review a few Unix commands that are necessary for navigating through files and directories (aka the "file system") in the Terminal (Mac OS X) or Git Bash (Windows).
 
 ** Basics **
 `pwd` -- ("print working directory") this displays the current working directory
@@ -56,10 +58,10 @@ Before we use Git locally on our own files, we should review a few Unix commands
 `rm` -- ("remove") is used to delete files or folders. The system will not allow you to remove nonempty folders without a special flag.
 `mv` -- ("move") is used to move files into directories or to rename files.
 
-Also, for Mac OS X users, I recommend learning how to use [Tab Completion](http://www.ernieflores.net/osx-page-4/how-to-enable-tab-completion-in-mac-os-x-terminal/). Git Bash enables Tab Completion by default so Windows users need not worry.
+Also, for Mac OS X users, I recommend enabling [*tab completion*](http://www.ernieflores.net/osx-page-4/how-to-enable-tab-completion-in-mac-os-x-terminal/) in the Terminal. Git Bash enables *tab completion* by default so Windows users need not worry about enabling it. *Tab completion* takes some getting used to but it greatly speeds up writing command line code.
 
 **Examples:**
-Anything with a `$` first is an inputted command. Just below the command is the output, if any is produced. 
+Anything with a `$` first is an inputted command. Just below the command is the output (if produced). 
 ```
 $ pwd
 /Users/dnoriega
