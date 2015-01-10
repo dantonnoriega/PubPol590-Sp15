@@ -38,7 +38,8 @@ Let's get started.
 
 ## Create A Github Account
 1. Sign up for a [GitHub account](https://github.com/). *Make sure you use your __Duke__ email!*
-2. Verify your email address. GitHub should send you an email automatically but if it does not, then follow [these instructions](https://help.github.com/articles/verifying-your-email-address/). 
+2. Verify your email address. GitHub should send you an email automatically but if it does not, then follow [these instructions](https://help.github.com/articles/verifying-your-email-address/).
+3. After you've verified your email, I *highly* recommend you request a [Student Developer Pack](https://education.github.com/pack). Hit "Get Your Pack" and follow the instructions. Getting your pack takes a few weeks but, once you get it, you'll be allowed 5 free private repositories for 2 years -- great deal!
 
 ## 15 minute Intro to Git 
 GitHub has a great interactive introduction to Git command line. To familiarize yourself with how Git works, as well as the most frequently used commands, please take 15 minutes to run through [tryGit](https://try.github.io/levels/1/challenges/1).
