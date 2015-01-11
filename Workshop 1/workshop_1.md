@@ -123,7 +123,9 @@ $ cd ~/Github/PubPol590/        # move inside "PubPol590"
 $ git init                      # initialize "PubPol590"
 ```
 
-3.  
+3. Login to your GitHub account and make a new repository with the same name ("PubPol590").
+![newrepogif](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/new_github_repo.gif)
+
 #### Create A Matching Online Repository
 
 ## Pull Then Push A File To The Class Repository  
