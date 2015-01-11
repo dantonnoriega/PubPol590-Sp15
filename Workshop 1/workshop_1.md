@@ -108,20 +108,22 @@ $ ls -F -a
 We are now going to put everything together and make a local repository. We will then make a matching online repository and "push" a simple text file to it.
 
 #### Make A Local Repository
-**1.** Create a new folder on your computer. Name it something logical like "GitHub" or "Repositories". Let's assume you name it "GitHub". Next, go inside the folder and create another folder called "PubPol590". You can do this manually (i.e. create two new folders in the Finder (MAC) or Windows Explorer (PC)) or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:
-    ```
-    $ cd ~                      # change to home directory
-    $ mkdir GitHub              # create directory "GitHub"
-    $ cd GitHub                 # move inside "GitHub"
-    $ mkdir PubPol590           # create directory "PubPol590"
-    $ cd PubPol590              # move inside "PubPol590"
-    ```
-**2.** Go to your new folder "PubPol590" using Unix command line and initialize the repository.
-    ```
-    $ cd ~/Github/PubPol590/        # move inside "PubPol590"
-    $ git init                      # initialize "PubPol590"
-    ```
-**3.** Login to your GitHub account and make a new repository with the same name ("PubPol590").
+1. Create a new folder on your computer. Name it something logical like "GitHub" or "Repositories". Let's assume you name it "GitHub". Next, go inside the folder and create another folder called "PubPol590". You can do this manually (i.e. create two new folders in the Finder (MAC) or Windows Explorer (PC)) or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:
+```
+$ cd ~                      # change to home directory
+$ mkdir GitHub              # create directory "GitHub"
+$ cd GitHub                 # move inside "GitHub"
+$ mkdir PubPol590           # create directory "PubPol590"
+$ cd PubPol590              # move inside "PubPol590"
+```
+
+2. Go to your new folder "PubPol590" using Unix command line and initialize the repository.
+```
+$ cd ~/Github/PubPol590/        # move inside "PubPol590"
+$ git init                      # initialize "PubPol590"
+```
+
+3. Login to your GitHub account and make a new repository with the same name ("PubPol590").
 ![newrepogif](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/new_github_repo.gif)
 
 #### Create A Matching Online Repository

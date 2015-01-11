@@ -1021,7 +1021,7 @@ body .markdown-body
 <p>In this class, we will be using a version control system called <a href="http://git-scm.com/">Git</a> and a popular online repository hosting service called <a href="https://github.com/">GitHub</a>. GitHub is a powerful tool for building projects and collaborating with other researchers. To incentivize mastery of Git, any and all work for this class must be &ldquo;pushed&rdquo; to GitHub to receive credit.</p>
 <p>Let&rsquo;s get started.  </p>
 <hr />
-<p>Objectives<br />
+<p><strong>Objectives</strong><br />
 <!-- MarkdownTOC depth=0 --></p>
 <ul>
 <li>Install GitHub and Git Bash<ul>
@@ -1029,11 +1029,16 @@ body .markdown-body
 <li>Windows</li>
 </ul>
 </li>
-<li>Create a GitHub account</li>
-<li>Unix Directory commands</li>
-<li>15 minute Git Intro Course</li>
-<li>Using Git On A Local Repository</li>
-<li>Pull then Push a file to the class repository</li>
+<li>Create A Github Account</li>
+<li>Complete 15 minute Intro to Git</li>
+<li>Setting Up Git On Your Computer</li>
+<li>Learn Basic Unix Directory Commands</li>
+<li>Create A Local Repository And Push A Simple Text File<ul>
+<li>Make A Local Repository</li>
+<li>Create A Matching Online Repository</li>
+</ul>
+</li>
+<li>Pull Then Push A File To The Class Repository</li>
 </ul>
 <!-- /MarkdownTOC -->
 
@@ -1042,19 +1047,87 @@ body .markdown-body
 <h3 id="mac-os-x"><a name="user-content-mac-os-x" href="#mac-os-x" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mac OS X</h3>
 <ol>
 <li><a href="https://mac.github.com/">Install GitHub for Mac</a></li>
-<li>Install the Git <a href="https://github.com/blog/1510-installing-git-from-github-for-mac">command line tools</a></li>
+<li>If you have OS 10.8 or below, then you&rsquo;ll need to install the Git <a href="https://github.com/blog/1510-installing-git-from-github-for-mac">command line tools</a>. Not necessary for Mavericks (10.9) and above.</li>
+<li>Open the Terminal and check Git is installed by typing <code>git version</code></li>
 </ol>
 <h3 id="windows"><a name="user-content-windows" href="#windows" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Windows</h3>
 <ol>
 <li><a href="https://windows.github.com/">Install GitHub for Windows</a></li>
 <li>GitHub should install Git Bash automatically</li>
 </ol>
-<h2 id="create-a-github-account"><a name="user-content-create-a-github-account" href="#create-a-github-account" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Create a GitHub account</h2>
+<h2 id="create-a-github-account"><a name="user-content-create-a-github-account" href="#create-a-github-account" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Create A Github Account</h2>
 <ol>
 <li>Sign up for a <a href="https://github.com/">GitHub account</a>. <em>Make sure you use your <strong>Duke</strong> email!</em></li>
-<li>Verify your email address.</li>
+<li>Verify your email address. GitHub should send you an email automatically but if it does not, then follow <a href="https://help.github.com/articles/verifying-your-email-address/">these instructions</a>.</li>
+<li>After you&rsquo;ve verified your email, I <em>highly</em> recommend you request a <a href="https://education.github.com/pack">Student Developer Pack</a>. Hit &ldquo;Get Your Pack&rdquo; and follow the instructions. Getting your pack takes a few weeks but, once you get it, you&rsquo;ll be allowed 5 free private repositories for 2 years &ndash; great deal!</li>
 </ol>
-<h2 id="unix-directory-commands"><a name="user-content-unix-directory-commands" href="#unix-directory-commands" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Unix Directory commands</h2>
-<h2 id="15-minute-git-intro-course"><a name="user-content-15-minute-git-intro-course" href="#15-minute-git-intro-course" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>15 minute Git Intro Course</h2>
-<h2 id="using-git-on-a-local-repository"><a name="user-content-using-git-on-a-local-repository" href="#using-git-on-a-local-repository" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Using Git On A Local Repository</h2>
-<h2 id="pull-then-push-a-file-to-the-class-repository"><a name="user-content-pull-then-push-a-file-to-the-class-repository" href="#pull-then-push-a-file-to-the-class-repository" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pull then Push a file to the class repository</h2></article></body></html>
+<h2 id="complete-15-minute-intro-to-git"><a name="user-content-complete-15-minute-intro-to-git" href="#complete-15-minute-intro-to-git" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Complete 15 minute Intro to Git</h2>
+<p>GitHub has a great interactive introduction to Git command line. To familiarize yourself with how Git works, as well as the most frequently used commands, please take 15 minutes to run through <a href="https://try.github.io/levels/1/challenges/1">tryGit</a>.</p>
+<p>You can find more detailed help about the basic Git commands being used <a href="http://gitref.org/basic/">here</a>.</p>
+<h2 id="setting-up-git-on-your-computer"><a name="user-content-setting-up-git-on-your-computer" href="#setting-up-git-on-your-computer" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Setting Up Git On Your Computer</h2>
+<p>Before using Git, you need to configure a few things, like your <code>user.name</code> and <code>user.email</code>.</p>
+<p>Here is what it looks like:<br />
+<pre><code>$ git config --global user.name &quot;Danton Noriega (DUKE)&quot;
+$ git config --global user.email &quot;drn12_at_duke.edu&quot;
+</code></pre></p>
+<p>Just replace your own name and email for mine listed above.  </p>
+<p>You can always check to see your global configurations running the following:<br />
+<pre><code>$ git config --global -l     # option -l stands for &quot;list&quot;
+user.name=Danton Noriega (Duke)
+user.email=drn12@duke.edu
+color.ui=auto
+core.editor=subl -n -w
+</code></pre></p>
+<h2 id="learn-basic-unix-directory-commands"><a name="user-content-learn-basic-unix-directory-commands" href="#learn-basic-unix-directory-commands" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Learn Basic Unix Directory Commands</h2>
+<p>Before we use Git locally on our own files, we should review a few Unix commands that are necessary for navigating through files and directories (aka the &ldquo;file system&rdquo;) in the Terminal (Mac OS X) or Git Bash (Windows).</p>
+<p><strong> Basics </strong><br />
+<code>pwd</code> &ndash; (&ldquo;print working directory&rdquo;) this displays the current working directory<br />
+<code>cd</code> &ndash; (&ldquo;change diretory&rdquo;) is used to enter or exit (i.e. &ldquo;change&rdquo;) directories. <br />
+<code>ls</code> &ndash; (&ldquo;listing&rdquo;) will display all files and folders in the current working directory. You can use the flag <code>-F</code> to distinguish directories (folders) from files and flag <code>-a</code> to display <em>all</em> files and folders, even hidden ones.<br />
+<code>rm</code> &ndash; (&ldquo;remove&rdquo;) is used to delete files or folders. The system will not allow you to remove nonempty folders without a special flag.<br />
+<code>mv</code> &ndash; (&ldquo;move&rdquo;) is used to move files into directories or to rename files.<br />
+<code>mkdir</code> &ndash; (&ldquo;make directory&rdquo;) creates a directory/folder</p>
+<p>Also, for Mac OS X users, I recommend enabling <a href="http://www.ernieflores.net/osx-page-4/how-to-enable-tab-completion-in-mac-os-x-terminal/"><em>tab completion</em></a> in the Terminal. Git Bash enables tab completion by default so Windows users need not worry about enabling it. Tab completion takes some getting used to but it greatly speeds up writing command line code.</p>
+<p><strong>Example:</strong><br />
+Anything with a <code>$</code> first is an inputted command. Just below the command is the output (if produced). <br />
+<pre><code>$ pwd
+/Users/dnoriega
+$ ls
+Applications        Documents       Google Drive        Pictures
+Downloads       Library         Public
+Box Sync        Dropbox         Movies          Samsung
+Desktop         GitHub          Music           Sites
+$ cd GitHub/Duke_PUBPOL590/Workshop\ 1/
+$ ls -F -a
+./              .DS_Store           workshop_1.html
+../             phd comics - final doc.gif  workshop_1.md
+$ cd ..
+$ ls -F -a
+./      ../     .DS_Store   .git/       Workshop 1/
+</code></pre></p>
+<h2 id="create-a-local-repository-and-push-a-simple-text-file"><a name="user-content-create-a-local-repository-and-push-a-simple-text-file" href="#create-a-local-repository-and-push-a-simple-text-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Create A Local Repository And Push A Simple Text File</h2>
+<p>We are now going to put everything together and make a local repository. We will then make a matching online repository and &ldquo;push&rdquo; a simple text file to it.</p>
+<h4 id="make-a-local-repository"><a name="user-content-make-a-local-repository" href="#make-a-local-repository" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Make A Local Repository</h4>
+<ol>
+<li>
+<p>Create a new folder on your computer. Name it something logical like &ldquo;GitHub&rdquo; or &ldquo;Repositories&rdquo;. Let&rsquo;s assume you name it &ldquo;GitHub&rdquo;. Next, go inside the folder and create another folder called &ldquo;PubPol590&rdquo;. You can do this manually (i.e. create two new folders in the Finder (MAC) or Windows Explorer (PC)) or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:<br />
+<pre><code>$ cd ~                      # change to home directory
+$ mkdir GitHub              # create directory &quot;GitHub&quot;
+$ cd GitHub                 # move inside &quot;GitHub&quot;
+$ mkdir PubPol590           # create directory &quot;PubPol590&quot;
+$ cd PubPol590              # move inside &quot;PubPol590&quot;
+</code></pre></p>
+</li>
+<li>
+<p>Go to your new folder &ldquo;PubPol590&rdquo; using Unix command line and initialize the repository.<br />
+<pre><code>$ cd ~/Github/PubPol590/        # move inside &quot;PubPol590&quot;
+$ git init                      # initialize &quot;PubPol590&quot;
+</code></pre></p>
+</li>
+<li>
+<p>Login to your GitHub account and make a new repository with the same name (&ldquo;PubPol590&rdquo;).<br />
+<img alt="newrepogif" src="https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/new_github_repo.gif" /></p>
+</li>
+</ol>
+<h4 id="create-a-matching-online-repository"><a name="user-content-create-a-matching-online-repository" href="#create-a-matching-online-repository" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Create A Matching Online Repository</h4>
+<h2 id="pull-then-push-a-file-to-the-class-repository"><a name="user-content-pull-then-push-a-file-to-the-class-repository" href="#pull-then-push-a-file-to-the-class-repository" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pull Then Push A File To The Class Repository</h2></article></body></html>
