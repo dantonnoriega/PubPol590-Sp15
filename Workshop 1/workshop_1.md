@@ -21,8 +21,9 @@ Let's get started.
 - Complete 15 minute Intro to Git
 - Setting Up Git On Your Computer
 - Learn Basic Unix Directory Commands
-- Create A Local Repository Local Repository
+- Create A Local Repository And Push A Simple Text File
     - Make A Local Repository
+    - Create A Matching Online Repository
 - Pull Then Push A File To The Class Repository
 
 <!-- /MarkdownTOC -->
@@ -51,13 +52,15 @@ GitHub has a great interactive introduction to Git command line. To familiarize 
 You can find more detailed help about the basic Git commands being used [here](http://gitref.org/basic/).
 
 ## Setting Up Git On Your Computer
-Before using Git, you need to configure a few things so you can communicate with your account on GitHub. The most important thing is ensuring your `user.email` matches on Git matches your online GitHub account. This will allow you to easily sync with your account online. `user.name` is just how you will identify yourself.
+Before using Git, you need to configure a few things, like your `user.name` and `user.email`.
 
 Here is what it looks like:
 ```
 $ git config --global user.name "Danton Noriega"
-$ git config --global user.email "drn12@duke.edu"
+$ git config --global user.email "drn12_at_duke.edu"
 ```
+
+Just replace your own name and email for mine listed above.
 
 ## Learn Basic Unix Directory Commands  
 Before we use Git locally on our own files, we should review a few Unix commands that are necessary for navigating through files and directories (aka the "file system") in the Terminal (Mac OS X) or Git Bash (Windows).
@@ -92,8 +95,8 @@ $ ls -F -a
 ```
 
 
-## Create A Local Repository Local Repository
-We are now going to put everything together and make a local repository. We are then going to make a matching online repository and "push" a simple text file to it.
+## Create A Local Repository And Push A Simple Text File
+We are now going to put everything together and make a local repository. We will then make a matching online repository and "push" a simple text file to it.
 
 #### Make A Local Repository
 1. Create a new folder on your computer. Name it something logical like "GitHub" or "Repositories". Let's assume you name it "GitHub". Next, go inside the folder and create another folder called "PubPol590". You can do this manually or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:
@@ -112,6 +115,10 @@ $ cd PubPol590              # move inside "PubPol590"
 $ cd ~/Github/PubPol590/        # move inside "PubPol590"
 $ git init                      # initialize "PubPol590"
 ```
+
+
+3. 
+#### Create A Matching Online Repository
 
 ## Pull Then Push A File To The Class Repository  
 
