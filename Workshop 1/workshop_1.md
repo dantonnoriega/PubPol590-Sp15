@@ -56,11 +56,20 @@ Before using Git, you need to configure a few things, like your `user.name` and 
 
 Here is what it looks like:
 ```
-$ git config --global user.name "Danton Noriega"
+$ git config --global user.name "Danton Noriega (DUKE)"
 $ git config --global user.email "drn12_at_duke.edu"
 ```
 
-Just replace your own name and email for mine listed above.
+Just replace your own name and email for mine listed above.  
+
+You can always check to see your global configurations running the following:
+```
+$ git config --global -l     # option -l stands for "list"
+user.name=Danton Noriega (Duke)
+user.email=drn12@duke.edu
+color.ui=auto
+core.editor=subl -n -w
+```
 
 ## Learn Basic Unix Directory Commands  
 Before we use Git locally on our own files, we should review a few Unix commands that are necessary for navigating through files and directories (aka the "file system") in the Terminal (Mac OS X) or Git Bash (Windows).
@@ -99,8 +108,7 @@ $ ls -F -a
 We are now going to put everything together and make a local repository. We will then make a matching online repository and "push" a simple text file to it.
 
 #### Make A Local Repository
-1. Create a new folder on your computer. Name it something logical like "GitHub" or "Repositories". Let's assume you name it "GitHub". Next, go inside the folder and create another folder called "PubPol590". You can do this manually or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:
-
+1. Create a new folder on your computer. Name it something logical like "GitHub" or "Repositories". Let's assume you name it "GitHub". Next, go inside the folder and create another folder called "PubPol590". You can do this manually (i.e. create two new folders in the Finder (MAC) or Windows Explorer (PC)) or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:
 ```    
 $ cd ~                      # change to home directory
 $ mkdir GitHub              # create directory "GitHub"
@@ -110,14 +118,12 @@ $ cd PubPol590              # move inside "PubPol590"
 ```
 
 2. Go to your new folder "PubPol590" using Unix command line and initialize the repository.
-
 ```
 $ cd ~/Github/PubPol590/        # move inside "PubPol590"
 $ git init                      # initialize "PubPol590"
 ```
 
-
-3. 
+3.  
 #### Create A Matching Online Repository
 
 ## Pull Then Push A File To The Class Repository  
