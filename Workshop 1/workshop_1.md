@@ -116,13 +116,11 @@ $ cd GitHub                 # move inside "GitHub"
 $ mkdir PubPol590           # create directory "PubPol590"
 $ cd PubPol590              # move inside "PubPol590"
 ```
-
 2. Go to your new folder "PubPol590" using Unix command line and initialize the repository.
 ```
 $ cd ~/Github/PubPol590/        # move inside "PubPol590"
 $ git init                      # initialize "PubPol590"
 ```
-
 3. Login to your GitHub account and make a new repository with the same name ("PubPol590").
 ![newrepogif](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/new_github_repo.gif)
 
