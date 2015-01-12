@@ -1,5 +1,7 @@
-# PubPol 590 -- Workshop 1
-## GitHub and Version Control
+<span style = "font-size: 170%">**PubPol 590** -- Workshop 1</span>
+
+GitHub and Version Control
+---
 
 Whether you are working on your own project or on a team project, [version control](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) is essential. It's like using "track changes" in MS Word but cleaner and more dependable. It's also free, works on any operating system, and can track any text-like document -- not just a single MS word document. Most importantly, version control allows you to confidently and fearlessly get work done -- your own or your team's -- while avoiding file-clutter and file-renaming headaches. In short, you'll avoid this:
 
@@ -22,7 +24,9 @@ Let's get started.
 - Setting Up Git On Your Computer
 - Learn Basic Unix Directory Commands
 - Create A Local Repository And Push A Simple Text File
-    - Make A Local Repository
+    - Create A Local Repository
+    - Create An Online Repository On Github
+    - Create A Simple Text File
     - Create A Matching Online Repository
 - Pull Then Push A File To The Class Repository
 
@@ -87,6 +91,7 @@ Also, for Mac OS X users, I recommend enabling [*tab completion*](http://www.ern
 **Example:**
 Anything with a `$` first is an inputted command. Just below the command is the output (if produced). 
 ```
+$ cd ~
 $ pwd
 /Users/dnoriega
 $ ls
@@ -94,21 +99,23 @@ Applications        Documents       Google Drive        Pictures
 Downloads       Library         Public
 Box Sync        Dropbox         Movies          Samsung
 Desktop         GitHub          Music           Sites
-$ cd GitHub/Duke_PUBPOL590/Workshop\ 1/
+$ cd GitHub/
 $ ls -F -a
-./              .DS_Store           workshop_1.html
-../             phd comics - final doc.gif  workshop_1.md
+./      ../     .DS_Store   PubPol590/
+$ cd PubPol590/
+$ ls -F -a
+./      ../     .git/       .gitattributes
 $ cd ..
-$ ls -F -a
-./      ../     .DS_Store   .git/       Workshop 1/
+$ pwd
+/Users/dnoriega/GitHub2
 ```
 
 
 ## Create A Local Repository And Push A Simple Text File
 We are now going to put everything together and make a local repository. We will then make a matching online repository and "push" a simple text file to it.
 
-#### Make A Local Repository
-1. Create a new folder on your computer. Name it something logical like "GitHub" or "Repositories". Let's assume you name it "GitHub". Next, go inside the folder and create another folder called "PubPol590". You can do this manually (i.e. create two new folders in the Finder (MAC) or Windows Explorer (PC)) or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:  
+#### Create A Local Repository
+1. Create a new folder on your computer that will house all your repositories. Name it something logical like "GitHub" or "Repositories". Let's assume you name it "GitHub". Next, go inside the folder and create another folder called "PubPol590". You can do this manually or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:  
     ```
     $ cd ~                      # change to home directory
     $ mkdir GitHub              # create directory "GitHub"
@@ -117,15 +124,21 @@ We are now going to put everything together and make a local repository. We will
     $ cd PubPol590              # move inside "PubPol590"
     ```
 
-2. Go to your new folder "PubPol590" using Unix command line and initialize the repository.  
+2. Go to your new folder "PubPol590" using Unix command line and initialize the repository.
     ```
     $ cd ~/Github/PubPol590/        # move inside "PubPol590"
     $ git init                      # initialize "PubPol590"
     ```
 
-3. Login to your GitHub account and make a new repository with the same name ("PubPol590").  
-    ![newrepogif](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/new_github_repo.gif)
+#### Create An Online Repository On Github
+1. [Login to your GitHub account](https://github.com/login).
+2. Make a new repository with the same name as your local repository ("PubPol590"):
+    ![newrepo_gif](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/new_github_repo.gif)
 
+#### Create A Simple Text File
+1. Open up any text editor (e.g. TextEdit (Mac) or Notepad (PC))
+2. Type in anything you'd like then save the file. For example:
+    ![ultimate_gif]
 #### Create A Matching Online Repository
 
 ## Pull Then Push A File To The Class Repository  
