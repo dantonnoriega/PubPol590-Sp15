@@ -1,6 +1,6 @@
 <span style = "font-size: 170%">**PubPol 590** -- Workshop 1</span>
 
-GitHub and Version Control
+Intro to GitHub and Version Control
 ---
 
 Whether you are working on your own project or on a team project, [version control](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) is essential. It's like using "track changes" in MS Word but cleaner and more dependable. It's also free, works on any operating system, and can track any text-like document -- not just a single MS word document. Most importantly, version control allows you to confidently and fearlessly get work done -- your own or your team's -- while avoiding file-clutter and file-renaming headaches. In short, you'll avoid this:
@@ -14,7 +14,7 @@ Let's get started.
 ---
 
 **Objectives**
-<!-- MarkdownTOC depth=0 -->
+<!-- MarkdownTOC depth=4 -->
 
 - Install GitHub and Git Bash
     - Mac OS X
@@ -23,12 +23,12 @@ Let's get started.
 - Complete 15 minute Intro to Git
 - Setting Up Git On Your Computer
 - Learn Basic Unix Directory Commands
-- Create A Local Repository And Push A Simple Text File
-    - Create A Local Repository
-    - Create An Online Repository On Github
-    - Create A Simple Text File
-    - Create A Matching Online Repository
-- Pull Then Push A File To The Class Repository
+- Create a Local Repository and Push a Simple Text File
+    - 1. Create a Local Repository
+    - 2. Create an Online Repository on Github
+    - 3. Create a Simple Text File
+    - 4. Add and Commit the File
+    - 5. Push a Commit to GitHub
 
 <!-- /MarkdownTOC -->
 
@@ -81,8 +81,8 @@ Before we use Git locally on our own files, we should review a few Unix commands
 ** Basics **
 `pwd` -- ("print working directory") this displays the current working directory
 `cd` -- ("change diretory") is used to enter or exit (i.e. "change") directories. 
-`ls` -- ("listing") will display all files and folders in the current working directory. You can use the flag `-F` to distinguish directories (folders) from files and flag `-a` to display *all* files and folders, even hidden ones.
-`rm` -- ("remove") is used to delete files or folders. The system will not allow you to remove nonempty folders without a special flag.
+`ls` -- ("listing") will display all files and folders in the current working directory. You can use the option `-F` to distinguish directories (folders) from files and option `-a` to display *all* files and folders, even hidden ones.
+`rm` -- ("remove") is used to delete files or folders. The system will not allow you to remove nonempty folders without a special option.
 `mv` -- ("move") is used to move files into directories or to rename files.
 `mkdir` -- ("make directory") creates a directory/folder
 
@@ -111,11 +111,11 @@ $ pwd
 ```
 
 
-## Create A Local Repository And Push A Simple Text File
+## Create a Local Repository and Push a Simple Text File
 We are now going to put everything together and make a local repository. We will then make a matching online repository and "push" a simple text file to it.
 
-#### Create A Local Repository
-1. Create a new folder on your computer that will house all your repositories. Name it something logical like "GitHub" or "Repositories". Let's assume you name it "GitHub". Next, go inside the folder and create another folder called "PubPol590". You can do this manually or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:  
+#### 1. Create a Local Repository
+Create a new folder on your computer that will house all your repositories. Name it something logical like "GitHub" or "Repositories". Let's assume you name it "GitHub". Next, go inside the folder and create another folder called "PubPol590". You can do this manually or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:  
     ```
     $ cd ~                      # change to home directory
     $ mkdir GitHub              # create directory "GitHub"
@@ -124,25 +124,105 @@ We are now going to put everything together and make a local repository. We will
     $ cd PubPol590              # move inside "PubPol590"
     ```
 
-2. Go to your new folder "PubPol590" using Unix command line and initialize the repository.
+Go to your new folder "PubPol590" using Unix command line and initialize the repository.
     ```
     $ cd ~/Github/PubPol590/        # move inside "PubPol590"
     $ git init                      # initialize "PubPol590"
     ```
 
-#### Create An Online Repository On Github
-1. [Login to your GitHub account](https://github.com/login).
-2. Make a new repository with the same name as your local repository ("PubPol590"):
+#### 2. Create an Online Repository on Github
+[Login to your GitHub account](https://github.com/login). Make a new repository with the same name as your local repository (*PubPol590*):
     ![newrepo_gif](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/new_github_repo.gif)
 
-#### Create A Simple Text File
-1. Open up any text editor (e.g. TextEdit (Mac) or Notepad (PC))
-2. Type in anything you'd like then save the file. For example:
-    ![ultimate_gif]
-#### Create A Matching Online Repository
+#### 3. Create a Simple Text File
+Open up any text editor e.g. TextEdit (Mac) or Notepad (PC). Type in anything you'd like then save the file in your new repository, *PubPol590*.  For example:
+    ![ultimate_gif](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/ultimate_txt.gif)
 
-## Pull Then Push A File To The Class Repository  
+#### 4. Add and Commit the File
+First, check the status of your repo.
+```
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
 
+    ultimate.txt
+```
 
+Git is letting us know that there is a file that has not yet been "staged". That is, the file has not been added to the list of changes we want to track. We can add ("stage") the files with the `$ git add [file_name]` then check the status again:
+```
+$ git add ultimate.txt
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
 
+    modified:   ultimate.txt
+```
+
+Next, we "commit" the changes to our staged files. We do this by using the `$ git commit -m "[write some text here]"` command. The option `-m` stands for message. Git will not allow you to commit files without a small commit message, so we use `-m` followed by short message in quotes to satisfy Git.
+
+```
+$ git commit -m "facts about ultimate"
+[master f15b72e] facts about ultimate
+ 1 file changed, 1 insertion(+)
+ create mode 100644 ultimate.txt
+```
+
+Let's check the status of our repo one more time.
+```
+$ git status
+On branch master
+nothing to commit, working directory clean
+```
+
+Success! All our changes have been stored in our local repository. If we ever need to review our commits, we can use `$ git log` or, in a more condensed form, `$ git reflog`.
+```
+$ git log
+commit f15b72e53b637d37c1ce53b52626faef78476670
+Author: Danton Noriega (Duke) <drn12@duke.edu>
+Date:   Sun Jan 11 22:38:21 2015 -0500
+
+    facts about ultimate
+
+$ git reflog
+f15b72e HEAD@{0}: commit: facts about ultimate
+```
+All that is left for us to do is "push" our commits to our repo on GitHub.
+
+#### 5. Push a Commit to GitHub
+Go to your online repo on GitHub and copy the URL. Assuming you created the repo correctly, you should have a link that looks like `https://github.com/DRNoriega/PubPol590/` but with your GitHub username in place of `DRNoriega`. Make sure you're in your local repository and then run the following:
+```
+$ git remote add origin https://github.com/DRNoriega/PubPol590/
+```
+
+What Git is doing roughly translates to *"add the remote repository that is located at `https://github.com/DRNoriega/PubPol590/` and give it the local nickname `origin`"*. You can use any nickname but `origin` is the common choice for most programmers who use with git (I have no idea why).
+
+Let's check to see that command ran successfully by using `$ git remote -v`. The option `-v` stands for "verbose". This will give us a list of the nicknames we have stored locally and the addresses they point to:
+```
+$ git remote -v
+class   https://github.com/DRNoriega/PubPol590 (fetch)
+class   https://github.com/DRNoriega/PubPol590 (push)
+```
+
+Everything looks good. The last step is to "push" our current commit. (We have yet to talk about "branching" but just know that the default nickname for any initial branch is `master`.)
+
+Recall that the nickname for our remote repo is `origin`. The nickname of our local branch is `master`. Thefore, we want to "push" to `origin` the commits we have staged in `master`. 
+```
+$ git push -u origin master
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 333 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/DRNoriega/PubPol590
+   aadcb91..3306938  master -> master
+Branch master set up to track remote branch master from origin.
+```
+
+Your output will likely be different from mine, but it gives you an idea of what to expect. Note the use of option `-u`. This option tells Git to remember where we are pushing to, and from where, so that next time we can just type `$ git push`.
+
+---
+
+You now know the basics of Git. Next, you will learn how to use Git and GitHub to collaborate using the commands `branch`, `fetch`, `merge`, and `pull`.
 
