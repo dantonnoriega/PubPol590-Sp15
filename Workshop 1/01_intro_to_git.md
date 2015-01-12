@@ -112,7 +112,7 @@ $ pwd
 
 
 ## Create a Local Repository and Push a Simple Text File
-We are now going to put everything together and make a local repository. We will then make a matching online repository and "push" a simple text file to it.
+You are now going to put everything together and create a local repository.After that, you will create a matching online ("remote") repository on GitHub and then create, *stage*, *commit*, and *push* a simple text file from your local repo to GitHub.
 
 #### 1. Create a Local Repository
 Create a new folder on your computer that will house all your repositories. Name it something logical like "GitHub" or "Repositories". Let's assume you name it "GitHub". Next, go inside the folder and create another folder called "PubPol590". You can do this manually or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:  
@@ -224,5 +224,5 @@ Your output will likely be different from mine, but it gives you an idea of what
 
 ---
 
-You now know the basics of Git. Next, you will learn how to use Git and GitHub to collaborate using the commands `branch`, `fetch`, `merge`, and `pull`.
+You now know the basics of Git. Next, you will learn how to use Git and GitHub to collaborate using the commands `branch`, `fetch`, `merge`, and `pull`. You will also be shown how and when to use the commands `reset`
 
