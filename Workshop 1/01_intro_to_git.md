@@ -5,7 +5,7 @@ Intro to GitHub and Version Control
 
 Whether you are working on your own project or on a team project, [version control](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) is essential. It's like using "track changes" in MS Word but cleaner and more dependable. It's also free, works on any operating system, and can track any text-like document -- not just a single MS word document. Most importantly, version control allows you to confidently and fearlessly get work done -- your own or your team's -- while avoiding file-clutter and file-renaming headaches. In short, you'll avoid this:
 
-![phdcomics](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/phd%20comics%20-%20final%20doc.gif)
+![phdcomics](https://github.com/ultinomics/Duke_PUBPOL590/blob/master/Workshop%201/gifs/phd_comics_final_doc.gif)
 
 In this class, we will be using a version control system called [Git](http://git-scm.com/) and a popular online repository hosting service called [GitHub](https://github.com/). GitHub is a powerful tool for building projects and collaborating with other researchers. To incentivize mastery of Git, any and all work for this class must be "pushed" to GitHub to receive credit.
 

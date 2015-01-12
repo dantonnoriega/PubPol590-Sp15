@@ -1,99 +1,1101 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
-</head>
-<body>
-<p><span style="font-size: 170%"><strong>PubPol 590</strong> -- Workshop 1</span></p>
-<h2 id="intro-to-github-and-version-control">Intro to GitHub and Version Control</h2>
-<p>Whether you are working on your own project or on a team project, <a href="http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">version control</a> is essential. It's like using &quot;track changes&quot; in MS Word but cleaner and more dependable. It's also free, works on any operating system, and can track any text-like document -- not just a single MS word document. Most importantly, version control allows you to confidently and fearlessly get work done -- your own or your team's -- while avoiding file-clutter and file-renaming headaches. In short, you'll avoid this:</p>
-<div class="figure">
-<img src="phd_comics_final_doc.gif" alt="phdcomics" />
-<p class="caption">phdcomics</p>
-</div>
-<p>In this class, we will be using a version control system called <a href="http://git-scm.com/">Git</a> and a popular online repository hosting service called <a href="https://github.com/">GitHub</a>. GitHub is a powerful tool for building projects and collaborating with other researchers. To incentivize mastery of Git, any and all work for this class must be &quot;pushed&quot; to GitHub to receive credit.</p>
-<p>Let's get started.</p>
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>01_intro_to_git</title></head><body><article class="markdown-body"><p><span style = "font-size: 170%"><strong>PubPol 590</strong> &ndash; Workshop 1</span></p>
+<h2 id="intro-to-github-and-version-control"><a name="user-content-intro-to-github-and-version-control" href="#intro-to-github-and-version-control" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Intro to GitHub and Version Control</h2>
+<p>Whether you are working on your own project or on a team project, <a href="http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">version control</a> is essential. It&rsquo;s like using &ldquo;track changes&rdquo; in MS Word but cleaner and more dependable. It&rsquo;s also free, works on any operating system, and can track any text-like document &ndash; not just a single MS word document. Most importantly, version control allows you to confidently and fearlessly get work done &ndash; your own or your team&rsquo;s &ndash; while avoiding file-clutter and file-renaming headaches. In short, you&rsquo;ll avoid this:</p>
+<p><img alt="phdcomics" src="https://github.com/ultinomics/Duke_PUBPOL590/blob/master/Workshop%201/gifs/phd_comics_final_doc.gif" /></p>
+<p>In this class, we will be using a version control system called <a href="http://git-scm.com/">Git</a> and a popular online repository hosting service called <a href="https://github.com/">GitHub</a>. GitHub is a powerful tool for building projects and collaborating with other researchers. To incentivize mastery of Git, any and all work for this class must be &ldquo;pushed&rdquo; to GitHub to receive credit.</p>
+<p>Let&rsquo;s get started.  </p>
 <hr />
-<p><strong>Objectives</strong> <!-- MarkdownTOC depth=4 --></p>
+<p><strong>Objectives</strong><br />
+<!-- MarkdownTOC depth=4 --></p>
 <ul>
-<li>Install GitHub and Git Bash
-<ul>
+<li>Install GitHub and Git Bash<ul>
 <li>Mac OS X</li>
 <li>Windows</li>
-</ul></li>
+</ul>
+</li>
 <li>Create A Github Account</li>
 <li>Complete 15 minute Intro to Git</li>
 <li>Setting Up Git On Your Computer</li>
-<li>Learn Basic Unix Directory Commands
-<ul>
+<li>Learn Basic Unix Directory Commands<ul>
 <li>Basics</li>
 <li>Example</li>
-</ul></li>
-<li>Create a Local Repository and Push a Simple Text File to GitHub
-<ul>
-<li><ol style="list-style-type: decimal">
+</ul>
+</li>
+<li>Create a Local Repository and Push a Simple Text File to GitHub<ul>
 <li>Create a Local Repository</li>
-</ol></li>
-<li><ol start="2" style="list-style-type: decimal">
 <li>Create an Online Repository on Github</li>
-</ol></li>
-<li><ol start="3" style="list-style-type: decimal">
 <li>Create a Simple Text File</li>
-</ol></li>
-<li><ol start="4" style="list-style-type: decimal">
 <li>Add and Commit the File</li>
-</ol></li>
-<li><ol start="5" style="list-style-type: decimal">
 <li>Push a Commit to GitHub</li>
-</ol></li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <!-- /MarkdownTOC -->
+
 <hr />
-<h2 id="install-github-and-git-bash">Install GitHub and Git Bash</h2>
-<h3 id="mac-os-x">Mac OS X</h3>
-<ol style="list-style-type: decimal">
+<h2 id="install-github-and-git-bash"><a name="user-content-install-github-and-git-bash" href="#install-github-and-git-bash" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Install GitHub and Git Bash</h2>
+<h3 id="mac-os-x"><a name="user-content-mac-os-x" href="#mac-os-x" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mac OS X</h3>
+<ol>
 <li><a href="https://mac.github.com/">Install GitHub for Mac</a></li>
-<li>If you have OS 10.8 or below, then you'll need to install the Git <a href="https://github.com/blog/1510-installing-git-from-github-for-mac">command line tools</a>. Not necessary for Mavericks (10.9) and above.</li>
+<li>If you have OS 10.8 or below, then you&rsquo;ll need to install the Git <a href="https://github.com/blog/1510-installing-git-from-github-for-mac">command line tools</a>. Not necessary for Mavericks (10.9) and above.</li>
 <li>Open the Terminal and check Git is installed by typing <code>git version</code></li>
 </ol>
-<h3 id="windows">Windows</h3>
-<ol style="list-style-type: decimal">
+<h3 id="windows"><a name="user-content-windows" href="#windows" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Windows</h3>
+<ol>
 <li><a href="https://windows.github.com/">Install GitHub for Windows</a></li>
 <li>GitHub should install Git Bash automatically</li>
 </ol>
-<h2 id="create-a-github-account">Create A Github Account</h2>
-<ol style="list-style-type: decimal">
+<h2 id="create-a-github-account"><a name="user-content-create-a-github-account" href="#create-a-github-account" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Create A Github Account</h2>
+<ol>
 <li>Sign up for a <a href="https://github.com/">GitHub account</a>. <em>Make sure you use your <strong>Duke</strong> email!</em></li>
 <li>Verify your email address. GitHub should send you an email automatically but if it does not, then follow <a href="https://help.github.com/articles/verifying-your-email-address/">these instructions</a>.</li>
-<li>After you've verified your email, I <em>highly</em> recommend you request a <a href="https://education.github.com/pack">Student Developer Pack</a>. Hit &quot;Get Your Pack&quot; and follow the instructions. Getting your pack takes a few weeks but, once you get it, you'll be allowed 5 free private repositories for 2 years -- great deal!</li>
+<li>After you&rsquo;ve verified your email, I <em>highly</em> recommend you request a <a href="https://education.github.com/pack">Student Developer Pack</a>. Hit &ldquo;Get Your Pack&rdquo; and follow the instructions. Getting your pack takes a few weeks but, once you get it, you&rsquo;ll be allowed 5 free private repositories for 2 years &ndash; great deal!</li>
 </ol>
-<h2 id="complete-15-minute-intro-to-git">Complete 15 minute Intro to Git</h2>
+<h2 id="complete-15-minute-intro-to-git"><a name="user-content-complete-15-minute-intro-to-git" href="#complete-15-minute-intro-to-git" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Complete 15 minute Intro to Git</h2>
 <p>GitHub has a great interactive introduction to Git command line. To familiarize yourself with how Git works, as well as the most frequently used commands, please take 15 minutes to run through <a href="https://try.github.io/levels/1/challenges/1">tryGit</a>.</p>
 <p>You can find more detailed help about the basic Git commands being used <a href="http://gitref.org/basic/">here</a>.</p>
-<h2 id="setting-up-git-on-your-computer">Setting Up Git On Your Computer</h2>
+<h2 id="setting-up-git-on-your-computer"><a name="user-content-setting-up-git-on-your-computer" href="#setting-up-git-on-your-computer" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Setting Up Git On Your Computer</h2>
 <p>Before using Git, you need to configure a few things, like your <code>user.name</code> and <code>user.email</code>.</p>
-<p>Here is what it looks like:</p>
+<p>Here is what it looks like:<br />
 <pre><code>$ git config --global user.name &quot;Danton Noriega (DUKE)&quot;
-$ git config --global user.email &quot;drn12_at_duke.edu&quot;</code></pre>
-<p>Just replace your own name and email for mine listed above.</p>
-<p>You can always check to see your global configurations running the following:</p>
+$ git config --global user.email &quot;drn12_at_duke.edu&quot;
+</code></pre></p>
+<p>Just replace your own name and email for mine listed above.  </p>
+<p>You can always check to see your global configurations running the following:<br />
 <pre><code>$ git config --global -l     # option -l stands for &quot;list&quot;
 user.name=Danton Noriega (Duke)
 user.email=drn12@duke.edu
 color.ui=auto
-core.editor=subl -n -w</code></pre>
-<h2 id="learn-basic-unix-directory-commands">Learn Basic Unix Directory Commands</h2>
-<p>Before we use Git locally on our own files, we should review a few Unix commands that are necessary for navigating through files and directories (aka the &quot;file system&quot;) in the Terminal (Mac OS X) or Git Bash (Windows).</p>
-<h4 id="basics">Basics</h4>
-<p><code>pwd</code> -- (&quot;print working directory&quot;) this displays the current working directory <code>cd</code> -- (&quot;change diretory&quot;) is used to enter or exit (i.e. &quot;change&quot;) directories. <code>ls</code> -- (&quot;listing&quot;) will display all files and folders in the current working directory. You can use the option <code>-F</code> to distinguish directories (folders) from files and option <code>-a</code> to display <em>all</em> files and folders, even hidden ones. <code>rm</code> -- (&quot;remove&quot;) is used to delete files or folders. The system will not allow you to remove nonempty folders without a special option. <code>mv</code> -- (&quot;move&quot;) is used to move files into directories or to rename files. <code>mkdir</code> -- (&quot;make directory&quot;) creates a directory/folder</p>
+core.editor=subl -n -w
+</code></pre></p>
+<h2 id="learn-basic-unix-directory-commands"><a name="user-content-learn-basic-unix-directory-commands" href="#learn-basic-unix-directory-commands" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Learn Basic Unix Directory Commands</h2>
+<p>Before we use Git locally on our own files, we should review a few Unix commands that are necessary for navigating through files and directories (aka the &ldquo;file system&rdquo;) in the Terminal (Mac OS X) or Git Bash (Windows).</p>
+<h4 id="basics"><a name="user-content-basics" href="#basics" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Basics</h4>
+<p><code>pwd</code> &ndash; (&ldquo;print working directory&rdquo;) this displays the current working directory<br />
+<code>cd</code> &ndash; (&ldquo;change diretory&rdquo;) is used to enter or exit (i.e. &ldquo;change&rdquo;) directories. <br />
+<code>ls</code> &ndash; (&ldquo;listing&rdquo;) will display all files and folders in the current working directory. You can use the option <code>-F</code> to distinguish directories (folders) from files and option <code>-a</code> to display <em>all</em> files and folders, even hidden ones.<br />
+<code>rm</code> &ndash; (&ldquo;remove&rdquo;) is used to delete files or folders. The system will not allow you to remove nonempty folders without a special option.<br />
+<code>mv</code> &ndash; (&ldquo;move&rdquo;) is used to move files into directories or to rename files.<br />
+<code>mkdir</code> &ndash; (&ldquo;make directory&rdquo;) creates a directory/folder</p>
 <p>Also, for Mac OS X users, I recommend enabling <a href="http://www.ernieflores.net/osx-page-4/how-to-enable-tab-completion-in-mac-os-x-terminal/"><em>tab completion</em></a> in the Terminal. Git Bash enables tab completion by default so Windows users need not worry about enabling it. Tab completion takes some getting used to but it greatly speeds up writing command line code.</p>
-<h4 id="example">Example</h4>
-<p>Anything with a <code>$</code> first is an inputted command. Just below the command is the output (if produced).</p>
+<h4 id="example"><a name="user-content-example" href="#example" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example</h4>
+<p>Anything with a <code>$</code> first is an inputted command. Just below the command is the output (if produced). <br />
 <pre><code>$ cd ~
 $ pwd
 /Users/dnoriega
@@ -110,42 +1112,59 @@ $ ls -F -a
 ./      ../     .git/       .gitattributes
 $ cd ..
 $ pwd
-/Users/dnoriega/GitHub2</code></pre>
-<h2 id="create-a-local-repository-and-push-a-simple-text-file-to-github">Create a Local Repository and Push a Simple Text File to GitHub</h2>
-<p>You are now going to put everything together and create a local repository.After that, you will create a matching online (&quot;remote&quot;) repository on GitHub and then create, <em>stage</em>, <em>commit</em>, and <em>push</em> a simple text file from your local repo to GitHub.</p>
-<h4 id="create-a-local-repository">1. Create a Local Repository</h4>
-<p>Create a new folder on your computer that will house all your repositories. Name it something logical like &quot;GitHub&quot; or &quot;Repositories&quot;. Let's assume you name it &quot;GitHub&quot;. Next, go inside the folder and create another folder called &quot;PubPol590&quot;. You can do this manually or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:<br /> <code>$ cd ~                      # change to home directory     $ mkdir GitHub              # create directory &quot;GitHub&quot;     $ cd GitHub                 # move inside &quot;GitHub&quot;     $ mkdir PubPol590           # create directory &quot;PubPol590&quot;     $ cd PubPol590              # move inside &quot;PubPol590&quot;</code></p>
-<p>Go to your new folder &quot;PubPol590&quot; using Unix command line and initialize the repository. <code>$ cd ~/Github/PubPol590/        # move inside &quot;PubPol590&quot;     $ git init                      # initialize &quot;PubPol590&quot;</code></p>
-<h4 id="create-an-online-repository-on-github">2. Create an Online Repository on Github</h4>
-<p><a href="https://github.com/login">Login to your GitHub account</a>. Make a new repository with the same name as your local repository (<em>PubPol590</em>): <img src="new_github_repo.gif" alt="newrepo_gif" /></p>
-<h4 id="create-a-simple-text-file">3. Create a Simple Text File</h4>
-<p>Open up any text editor e.g. TextEdit (Mac) or Notepad (PC). Type in anything you'd like then save the file in your new repository, <em>PubPol590</em>. For example: <img src="ultimate_txt.gif" alt="ultimate_gif" /></p>
-<h4 id="add-and-commit-the-file">4. Add and Commit the File</h4>
-<p>First, check the status of your repo.</p>
+/Users/dnoriega/GitHub2
+</code></pre></p>
+<h2 id="create-a-local-repository-and-push-a-simple-text-file-to-github"><a name="user-content-create-a-local-repository-and-push-a-simple-text-file-to-github" href="#create-a-local-repository-and-push-a-simple-text-file-to-github" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Create a Local Repository and Push a Simple Text File to GitHub</h2>
+<p>You are now going to put everything together and create a local repository.After that, you will create a matching online (&ldquo;remote&rdquo;) repository on GitHub and then create, <em>stage</em>, <em>commit</em>, and <em>push</em> a simple text file from your local repo to GitHub.</p>
+<h4 id="1-create-a-local-repository"><a name="user-content-1-create-a-local-repository" href="#1-create-a-local-repository" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. Create a Local Repository</h4>
+<p>Create a new folder on your computer that will house all your repositories. Name it something logical like &ldquo;GitHub&rdquo; or &ldquo;Repositories&rdquo;. Let&rsquo;s assume you name it &ldquo;GitHub&rdquo;. Next, go inside the folder and create another folder called &ldquo;PubPol590&rdquo;. You can do this manually or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:<br />
+    <pre><code>$ cd ~                      # change to home directory
+$ mkdir GitHub              # create directory &quot;GitHub&quot;
+$ cd GitHub                 # move inside &quot;GitHub&quot;
+$ mkdir PubPol590           # create directory &quot;PubPol590&quot;
+$ cd PubPol590              # move inside &quot;PubPol590&quot;
+</code></pre></p>
+<p>Go to your new folder &ldquo;PubPol590&rdquo; using Unix command line and initialize the repository.<br />
+    <pre><code>$ cd ~/Github/PubPol590/        # move inside &quot;PubPol590&quot;
+$ git init                      # initialize &quot;PubPol590&quot;
+</code></pre></p>
+<h4 id="2-create-an-online-repository-on-github"><a name="user-content-2-create-an-online-repository-on-github" href="#2-create-an-online-repository-on-github" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2. Create an Online Repository on Github</h4>
+<p><a href="https://github.com/login">Login to your GitHub account</a>. Make a new repository with the same name as your local repository (<em>PubPol590</em>):<br />
+<img alt="newrepo_gif" src="https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/new_github_repo.gif" /></p>
+<h4 id="3-create-a-simple-text-file"><a name="user-content-3-create-a-simple-text-file" href="#3-create-a-simple-text-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3. Create a Simple Text File</h4>
+<p>Open up any text editor e.g. TextEdit (Mac) or Notepad (PC). Type in anything you&rsquo;d like then save the file in your new repository, <em>PubPol590</em>.  For example:<br />
+<img alt="ultimate_gif" src="https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/ultimate_txt.gif" /></p>
+<h4 id="4-add-and-commit-the-file"><a name="user-content-4-add-and-commit-the-file" href="#4-add-and-commit-the-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4. Add and Commit the File</h4>
+<p>First, check the status of your repo.<br />
 <pre><code>$ git status
 On branch master
 Untracked files:
   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
 
-    ultimate.txt</code></pre>
-<p>Git is letting us know that there is a file that has not yet been &quot;staged&quot;. That is, the file has not been added to the list of changes we want to track. We can add (&quot;stage&quot;) the files with the <code>$ git add [file_name]</code> then check the status again:</p>
+    ultimate.txt
+</code></pre></p>
+<p>Git is letting us know that there is a file that has not yet been &ldquo;staged&rdquo;. That is, the file has not been added to the list of changes we want to track. We can add (&ldquo;stage&rdquo;) the files with the <code>$ git add [file_name]</code> then check the status again:<br />
 <pre><code>$ git add ultimate.txt
 $ git status
 On branch master
 Changes to be committed:
   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
 
-    modified:   ultimate.txt</code></pre>
-<p>Next, we &quot;commit&quot; the changes to our staged files. We do this by using the <code>$ git commit -m &quot;[write some text here]&quot;</code> command. The option <code>-m</code> stands for message. Git will not allow you to commit files without a small commit message, so we use <code>-m</code> followed by short message in quotes to satisfy Git.</p>
+    modified:   ultimate.txt
+</code></pre></p>
+<p>Next, we &ldquo;commit&rdquo; the changes to our staged files. We do this by using the <code>$ git commit -m "[write some text here]"</code> command. The option <code>-m</code> stands for message. Git will not allow you to commit files without a small commit message, so we use <code>-m</code> followed by short message in quotes to satisfy Git.</p>
 <pre><code>$ git commit -m &quot;facts about ultimate&quot;
 [master f15b72e] facts about ultimate
  1 file changed, 1 insertion(+)
- create mode 100644 ultimate.txt</code></pre>
-<p>Let's check the status of our repo one more time.</p>
+ create mode 100644 ultimate.txt
+</code></pre>
+
+<p>Let&rsquo;s check the status of our repo one more time.<br />
 <pre><code>$ git status
 On branch master
-nothing to commit, working directory clean</code></pre>
-<p>Success! All our changes have been stored in our local repository. If we ever need to review our commits, we can use <code>$ git log</code> or, in a more condensed form, <code>$ git reflog</code>.</p>
+nothing to commit, working directory clean
+</code></pre></p>
+<p>Success! All our changes have been stored in our local repository. If we ever need to review our commits, we can use <code>$ git log</code> or, in a more condensed form, <code>$ git reflog</code>.<br />
 <pre><code>$ git log
 commit f15b72e53b637d37c1ce53b52626faef78476670
 Author: Danton Noriega (Duke) &lt;drn12@duke.edu&gt;
@@ -154,18 +1173,21 @@ Date:   Sun Jan 11 22:38:21 2015 -0500
     facts about ultimate
 
 $ git reflog
-f15b72e HEAD@{0}: commit: facts about ultimate</code></pre>
-<p>All that is left for us to do is &quot;push&quot; our commits to our repo on GitHub.</p>
-<h4 id="push-a-commit-to-github">5. Push a Commit to GitHub</h4>
-<p>Go to your online repo on GitHub and copy the URL. Assuming you created the repo correctly, you should have a link that looks like <code>https://github.com/DRNoriega/PubPol590/</code> but with your GitHub username in place of <code>DRNoriega</code>. Make sure you're in your local repository and then run the following:</p>
-<pre><code>$ git remote add origin https://github.com/DRNoriega/PubPol590/</code></pre>
-<p>What Git is doing roughly translates to <em>&quot;add the remote repository that is located at <code>https://github.com/DRNoriega/PubPol590/</code> and give it the local nickname <code>origin</code>&quot;</em>. You can use any nickname but <code>origin</code> is the common choice for most programmers who use with git (I have no idea why).</p>
-<p>Let's check to see that command ran successfully by using <code>$ git remote -v</code>. The option <code>-v</code> stands for &quot;verbose&quot;. This will give us a list of the nicknames we have stored locally and the addresses they point to:</p>
+f15b72e HEAD@{0}: commit: facts about ultimate
+</code></pre><br />
+All that is left for us to do is &ldquo;push&rdquo; our commits to our repo on GitHub.</p>
+<h4 id="5-push-a-commit-to-github"><a name="user-content-5-push-a-commit-to-github" href="#5-push-a-commit-to-github" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5. Push a Commit to GitHub</h4>
+<p>Go to your online repo on GitHub and copy the URL. Assuming you created the repo correctly, you should have a link that looks like <code>https://github.com/DRNoriega/PubPol590/</code> but with your GitHub username in place of <code>DRNoriega</code>. Make sure you&rsquo;re in your local repository and then run the following:<br />
+<pre><code>$ git remote add origin https://github.com/DRNoriega/PubPol590/
+</code></pre></p>
+<p>What Git is doing roughly translates to <em>&ldquo;add the remote repository that is located at <code>https://github.com/DRNoriega/PubPol590/</code> and give it the local nickname <code>origin</code>&ldquo;</em>. You can use any nickname but <code>origin</code> is the common choice for most programmers who use with git (I have no idea why).</p>
+<p>Let&rsquo;s check to see that command ran successfully by using <code>$ git remote -v</code>. The option <code>-v</code> stands for &ldquo;verbose&rdquo;. This will give us a list of the nicknames we have stored locally and the addresses they point to:<br />
 <pre><code>$ git remote -v
 class   https://github.com/DRNoriega/PubPol590 (fetch)
-class   https://github.com/DRNoriega/PubPol590 (push)</code></pre>
-<p>Everything looks good. The last step is to &quot;push&quot; our current commit. (We have yet to talk about &quot;branching&quot; but just know that the default nickname for any initial branch is <code>master</code>.)</p>
-<p>Recall that the nickname for our remote repo is <code>origin</code>. The nickname of our local branch is <code>master</code>. Thefore, we want to &quot;push&quot; to <code>origin</code> the commits we have staged in <code>master</code>.</p>
+class   https://github.com/DRNoriega/PubPol590 (push)
+</code></pre></p>
+<p>Everything looks good. The last step is to &ldquo;push&rdquo; our current commit. (We have yet to talk about &ldquo;branching&rdquo; but just know that the default nickname for any initial branch is <code>master</code>.)</p>
+<p>Recall that the nickname for our remote repo is <code>origin</code>. The nickname of our local branch is <code>master</code>. Thefore, we want to &ldquo;push&rdquo; to <code>origin</code> the commits we have staged in <code>master</code>. <br />
 <pre><code>$ git push -u origin master
 Counting objects: 5, done.
 Delta compression using up to 8 threads.
@@ -174,9 +1196,8 @@ Writing objects: 100% (3/3), 333 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/DRNoriega/PubPol590
    aadcb91..3306938  master -&gt; master
-Branch master set up to track remote branch master from origin.</code></pre>
+Branch master set up to track remote branch master from origin.
+</code></pre></p>
 <p>Your output will likely be different from mine, but it gives you an idea of what to expect. Note the use of option <code>-u</code>. This option tells Git to remember where we are pushing to, and from where, so that next time we can just type <code>$ git push</code>.</p>
 <hr />
-<p>You now know the basics of Git. Next, you will learn how to use Git and GitHub to collaborate using the commands <code>fetch</code>, <code>merge</code>, and <code>pull</code>. You will also be shown how and when to use the commands <code>branch</code>, <code>checkout</code>, and <code>reset</code>.</p>
-</body>
-</html>
+<p>You now know the basics of Git. Next, you will learn how to use Git and GitHub to collaborate using the commands <code>fetch</code>, <code>merge</code>, and <code>pull</code>. You will also be shown how and when to use the commands <code>branch</code>, <code>checkout</code>, and <code>reset</code>.</p></article></body></html>
