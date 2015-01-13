@@ -18,6 +18,7 @@ Let's get started.
 
 - Install GitHub and Git Bash
 - Create A Github Account
+- Git Command Line?
 - Complete 15 minute Intro to Git
 - Setting Up Git On Your Computer
 - Learn Basic Unix Directory Commands
@@ -43,12 +44,20 @@ Let's get started.
 2. Verify your email address. GitHub should send you an email automatically but if it does not, then follow [these instructions](https://help.github.com/articles/verifying-your-email-address/).
 3. After you've verified your email, I *highly* recommend you request a [Student Developer Pack](https://education.github.com/pack). Hit "Get Your Pack" and follow the instructions. Getting your pack takes a few weeks but, once you get it, you'll be allowed 5 free private repositories for 2 years -- great deal!
 
+## Git Command Line?
+You may be wondering why I'm emphasizing Git command line after asking you to install the GitHub app. The GitHub app is user friendly with a wonderful graphic user interface (GUI). Git command line is looks scary and is very unpleasant for those not very comfortable with programming. 
+
+However, it is very difficult to understand the machinery of what the GitHub app is doing without knowing basic Git command line. Furthermore, most firms use the GitHub app (or other [Git GUIs](http://git-scm.com/downloads/guis)) to "visualize" what is being done in the command line. The actual work of pushing/tracking files is generally not done on the GitHub app --- or any other Git GUI --- but via command line. Furthermore, if you learn Git using an specific app, then you constrain yourself to knowing how to use Git *only* with that app. What if you switch to a firm or team that uses a different Git GUI? If you know Git command line, you can use *any* Git GUI.
+
+I also want to introduce you all to what true programming feels like and that one need not be scared of command line interfaces. Command line coding is efficient and powerful but, yes, it can be scary. But just like any new skill, fear subsides with practice.
+
 ## Complete 15 minute Intro to Git 
 GitHub has a great interactive introduction to Git command line. To familiarize yourself with how Git works, as well as the most frequently used commands, please take 15 minutes to run through [tryGit](https://try.github.io/levels/1/challenges/1).
 
 You can find more detailed help about the basic Git commands being used [here](http://gitref.org/basic/).
 
 ## Setting Up Git On Your Computer
+
 Before using Git, you need to configure a few things, like your `user.name` and `user.email`.
 
 Here is what it looks like:
