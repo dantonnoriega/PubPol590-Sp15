@@ -5,7 +5,7 @@ Intro to GitHub and Version Control
 
 Whether you are working on your own project or on a team project, [version control](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) is essential. It's like using "track changes" in MS Word but cleaner and more dependable. It's also free, works on any operating system, and can track any text-like document -- not just a single MS word document. Most importantly, version control allows you to confidently and fearlessly get work done -- your own or your team's -- while avoiding file-clutter and file-renaming headaches. In short, you'll avoid this:
 
-![phdcomics](https://github.com/ultinomics/Duke_PUBPOL590/blob/master/Workshop%201/gifs/phd_comics_final_doc.gif)
+![phdcomics](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/phd_comics_final_doc.gif)
 
 In this class, we will be using a version control system called [Git](http://git-scm.com/) and a popular online repository hosting service called [GitHub](https://github.com/). GitHub is a powerful tool for building projects and collaborating with other researchers. To incentivize mastery of Git, any and all work for this class must be "pushed" to GitHub to receive credit.
 
@@ -14,23 +14,14 @@ Let's get started.
 ---
 
 **Objectives**
-<!-- MarkdownTOC depth=4 -->
+<!-- MarkdownTOC depth=2 -->
 
 - Install GitHub and Git Bash
-    - Mac OS X
-    - Windows
 - Create A Github Account
 - Complete 15 minute Intro to Git
 - Setting Up Git On Your Computer
 - Learn Basic Unix Directory Commands
-    - Basics
-    - Example
 - Create a Local Repository and Push a Simple Text File to GitHub
-    - 1. Create a Local Repository
-    - 2. Create an Online Repository on Github
-    - 3. Create a Simple Text File
-    - 4. Add and Commit the File
-    - 5. Push a Commit to GitHub
 
 <!-- /MarkdownTOC -->
 
@@ -223,6 +214,14 @@ Branch master set up to track remote branch master from origin.
 ```
 
 Your output will likely be different from mine, but it gives you an idea of what to expect. Note the use of option `-u`. This option tells Git to remember where we are pushing to, and from where, so that next time we can just type `$ git push`.
+
+#### 6. Verify Your Push
+Let's verify that our push was successful.
+
+Login to your GitHub account and go to your *PubPol590* repository. You should see something like this:
+	![verify](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/verify.gif)
+	
+If you see your file with the proper commit message, then success!
 
 ---
 
