@@ -41,32 +41,38 @@ Let's get started.
 3. After you've verified your email, I *highly* recommend you request a [Student Developer Pack](https://education.github.com/pack). Hit "Get Your Pack" and follow the instructions. Getting your pack takes a few weeks but, once you get it, you'll be allowed 5 free private repositories for 2 years -- great deal!
 
 ## Intro to the GitHub App
-I will be using a lot of funny words. I'll talk explain them briefly, but if you're ever lost or want more detail on some of the words, please refer to the [GitHub Glossary](https://help.github.com/articles/github-glossary/).
+I will be using a lot of funny words. I'll explain them briefly as I go, but if you're ever lost or want more detail on some of the words, please refer to the [GitHub Glossary](https://help.github.com/articles/github-glossary/).
 
 ### Create a Local Repository and Push a Simple Text File to GitHub
 You are now going to create your first repository (aka "repo") and push your first file to GitHub!
 
 #### Open the GitHub App and Login to Your GitHub Account
 Open up the GitHub. It should be empty:
-	![fresh_github][01]
+
+![fresh_github][01]
 	
 Go to *Preferences* and then *Accounts*:
-	![preferences][02]
-	![accounts][03]
+
+![preferences][02]
+
+![accounts][03]
 
 Input your username and password then sign in.
 
 
 #### Create a Local Repository
 To the the plus sign in the top left corner and select *create* and name a new repo. *"PubPol590"* is selected as the repo name in this example:
-	![name_repo][04]
+
+![name_repo][04]
 	
 Click the *"Changes"* tab. Notice that it's empty! This is because you have yet to add any files! Also, if you forget where your repo is, you can always right click the repo to find it on your hard drive:
-	![locate_repo][05]
+
+![locate_repo][05]
 	
 #### Create a Simple Text File	
 Open up any text editor e.g. TextEdit (Mac) or Notepad (PC). Type in anything you'd like then save the file in your new repository:
-    ![ultimate_gif][06]
+
+![ultimate_gif][06]
     
 Notice that under the changes that, it now has a file with a green *"NEW"*. The GitHub automatically detects any changes in a repo. In the right-most pane, it also gives a detailed view of exactly what has changed compared to any previous version.
 
@@ -88,14 +94,17 @@ Once you've selected the files you want staged, you need to commit the files. Wh
 Ok, let's commit the changes to your staged files. Note that GitHub will not allow you to commit files without a small commit summary. Add a brief summary. 
 
 After you finish writing your summary, click the *Commit* button. Now that our files are locally committed, let's "push" those changes to a remote repo on GitHub accounts! To "push" the your commits, hit the *Publish* button in the top right corner. Note that this will only say "publish" the first first time you push a local repo that is not listed on your GitHub account. After you publish your repo on GitHub with your first push, the button will switch to saying "Sync".
-	![commit_push][07]
+
+![commit_push][07]
 	
 #### Verify Your Push
 Let's verify that our push was successful.
 
 Login to your GitHub account and go to your newly published repository. You should see something like this:
-	![verify][08]
-	![verify_png][09]
+
+![verify][08]
+
+![verify_png][09]
 	
 If you see your file with the proper commit message, then success!
 
