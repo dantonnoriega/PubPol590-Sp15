@@ -228,7 +228,7 @@ Your output will likely be different from mine, but it gives you an idea of what
 Let's verify that our push was successful.
 
 Login to your GitHub account and go to your *PubPol590* repository. You should see something like this:
-	![verify](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/verify.gif)
+	![verify](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/08_verify.gif)
 	
 If you see your file with the proper commit message, then success!
 
