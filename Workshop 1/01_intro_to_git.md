@@ -5,7 +5,7 @@ Intro to GitHub and Version Control
 
 Whether you are working on your own project or on a team project, [version control](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) is essential. It's like using "track changes" in MS Word but cleaner and more dependable. It's also free, works on any operating system, and can track any text-like document -- not just a single MS word document. Most importantly, version control allows you to confidently and fearlessly get work done -- your own or your team's -- while avoiding file-clutter and file-renaming headaches. In short, you'll avoid this:
 
-![phdcomics](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/phd_comics_final_doc.gif)
+![phdcomics](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/00_phd_comics_final_doc.gif)
 
 In this class, we will be using a version control system called [Git](http://git-scm.com/) and a popular online repository hosting service called [GitHub](https://github.com/). GitHub is a powerful tool for building projects and collaborating with other researchers. To incentivize mastery of Git, any and all work for this class must be "pushed" to GitHub to receive credit.
 
@@ -165,8 +165,8 @@ Changes to be committed:
 Next, we "commit" the changes to our staged files. We do this by using the `$ git commit -m "[write some text here]"` command. The option `-m` stands for message. Git will not allow you to commit files without a small commit message, so we use `-m` followed by short message in quotes to satisfy Git.
 
 ```
-$ git commit -m "facts about ultimate"
-[master f15b72e] facts about ultimate
+$ git commit -m "first commit!"
+[master f15b72e] first commit!
  1 file changed, 1 insertion(+)
  create mode 100644 ultimate.txt
 ```
@@ -185,10 +185,10 @@ commit f15b72e53b637d37c1ce53b52626faef78476670
 Author: Danton Noriega (Duke) <drn12@duke.edu>
 Date:   Sun Jan 11 22:38:21 2015 -0500
 
-    facts about ultimate
+    first commit!
 
 $ git reflog
-f15b72e HEAD@{0}: commit: facts about ultimate
+f15b72e HEAD@{0}: commit: first commit!
 ```
 All that is left for us to do is "push" our commits to our repo on GitHub.
 
