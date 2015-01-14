@@ -165,8 +165,8 @@ Changes to be committed:
 Next, we "commit" the changes to our staged files. We do this by using the `$ git commit -m "[write some text here]"` command. The option `-m` stands for message. Git will not allow you to commit files without a small commit message, so we use `-m` followed by short message in quotes to satisfy Git.
 
 ```
-$ git commit -m "first commit!"
-[master f15b72e] first commit!
+$ git commit -m "first commit"
+[master f15b72e] first commit
  1 file changed, 1 insertion(+)
  create mode 100644 ultimate.txt
 ```
@@ -185,10 +185,10 @@ commit f15b72e53b637d37c1ce53b52626faef78476670
 Author: Danton Noriega (Duke) <drn12@duke.edu>
 Date:   Sun Jan 11 22:38:21 2015 -0500
 
-    first commit!
+    first commit
 
 $ git reflog
-f15b72e HEAD@{0}: commit: first commit!
+f15b72e HEAD@{0}: commit: first commit
 ```
 All that is left for us to do is "push" our commits to our repo on GitHub.
 
