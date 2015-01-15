@@ -4,20 +4,20 @@ Canopy is a powerful Python Interactive Development Environment that is free for
 
 ## Instructions
 
-1. Go to the following link: https://store.enthought.com/#canopy-academic
+1. Go to the following link: https://store.enthought.com/#canopy-academic  
 
-2. Hit the big blue button on the right that says "Request your license"
+2. Hit the big blue button on the right that says "Request your license"  
 	![1][1]
-3. Create an account -- YOU MUST USE YOUR DUKE EMAIL. Enter "Duke University" as you Organization.
+3. Create an account -- YOU MUST USE YOUR DUKE EMAIL. Enter "Duke University" as you Organization.  
 	![2][2]
 	![3][3]
-4. Click the link in your email.
+4. Click the link in your email.  
 	![4][4]
-5. You should see the following:
+5. You should see the following:  
 	![5][5]
-5. Once you get to the page that says "Congratulations!", find the link you can download Canopy for any platform.
+5. Once you get to the page that says "Congratulations!", find the link you can download Canopy for any platform.  
 	![6][6]
-6. The appropriate version should be detected automatically. Hit the blue "Download Canopy" button. It's pretty big, about 250 mbs for OS X.
+6. The appropriate version should be detected automatically. Hit the blue "Download Canopy" button. It's pretty big, about 250 mbs for OS X.  
 	![7][7]
 7. Once you finish the download, follow the installation instructions and just accept the defaults Canopy provides you with. It comes with more than plenty!
 
