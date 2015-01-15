@@ -25,12 +25,12 @@ Post to Piazza if you have any questions or issues. I recommend you start playin
 
 - Dan
 
-[1]: canopy_1.png "canopy_1"
-[2]: canopy_2.png "canopy_2"
-[3]: canopy_3.png "canopy_3"
-[4]: canopy_4.png "canopy_4"
-[5]: canopy_5.png "canopy_5"
-[6]: canopy_6.png "canopy_6"
-[7]: canopy_7.png "canopy_7"
+[1]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_1.png "canopy_1"
+[2]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_2.png "canopy_2"
+[3]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_3.png "canopy_3"
+[4]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_4.png "canopy_4"
+[5]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_5.png "canopy_5"
+[6]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_6.png "canopy_6"
+[7]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_7.png "canopy_7"
 
 
