@@ -22,8 +22,9 @@ Spring 2015
 **Office Hours:** Tu 2 - 5 pm, Th 10 - 12 pm @ SSRI Connections Bar
 **Email:** danton.noriega@duke.edu
   
-**Course Website:** https://sakai.duke.edu  
-**Course GitHub:** https://github.com/ultinomics/Duke_PUBPOL590
+[**Course Website**](https://sakai.duke.edu)
+[**Course GitHub**](https://github.com/ultinomics/Duke_PUBPOL590)
+
 ---
 
 ## Course description
