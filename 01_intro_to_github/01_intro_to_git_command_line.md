@@ -5,7 +5,7 @@ Intro to GitHub and Version Control
 
 Whether you are working on your own project or on a team project, [version control](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) is essential. It's like using "track changes" in MS Word but cleaner and more dependable. It's also free, works on any operating system, and can track any text-like document -- not just a single MS word document. Most importantly, version control allows you to confidently and fearlessly get work done -- your own or your team's -- while avoiding file-clutter and file-renaming headaches. In short, you'll avoid this:
 
-![phdcomics](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/00_phd_comics_final_doc.gif)
+![phdcomics](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/00_phd_comics_final_doc.gif)
 
 In this class, we will be using a version control system called [Git](http://git-scm.com/) and a popular online repository hosting service called [GitHub](https://github.com/). GitHub is a powerful tool for building projects and collaborating with other researchers. To incentivize mastery of Git, any and all work for this class must be "pushed" to GitHub to receive credit.
 
@@ -134,11 +134,11 @@ Go to your new folder "PubPol590" using Unix command line and initialize the rep
 
 #### 2. Create an Online Repository on Github
 [Login to your GitHub account](https://github.com/login). Make a new repository with the same name as your local repository (*PubPol590*):
-    ![newrepo_gif](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/new_github_repo.gif)
+    ![newrepo_gif](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/new_github_repo.gif)
 
 #### 3. Create a Simple Text File
 Open up any text editor e.g. TextEdit (Mac) or Notepad (PC). Type in anything you'd like then save the file in your new repository, *PubPol590*.  For example:
-    ![ultimate_gif](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/ultimate_txt.gif)
+    ![ultimate_gif](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/ultimate_txt.gif)
 
 #### 4. Add and Commit the File
 First, check the status of your repo.
@@ -228,7 +228,7 @@ Your output will likely be different from mine, but it gives you an idea of what
 Let's verify that our push was successful.
 
 Login to your GitHub account and go to your *PubPol590* repository. You should see something like this:
-	![verify](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/08_verify.gif)
+	![verify](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/08_verify.gif)
 	
 If you see your file with the proper commit message, then success!
 

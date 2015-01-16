@@ -119,14 +119,14 @@ If you see your file with the proper commit message, then success!
 
 You now know the basics of using the GitHub App.
 
-[00]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/00_phd_comics_final_doc.gif "00_phd_comics_final_doc"
-[01]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/01_fresh_github.png "01_fresh_github"
-[02]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/02_preferences.png "02_preferences"
-[03]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/03_login_info.png "03_login_info"
-[04]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/04_name_repo.png "04_name_repo"
-[05]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/05_locate_repo.gif "05_locate_repo"
-[06]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/06_create_txt.gif "06_create_txt"
-[07]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/07_commit_push.gif "07_commit_push"
-[08]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/08_verify.gif "08_verify"
-[09]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Workshop%201/gifs/09_verify.png "09_verify"
+[00]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/00_phd_comics_final_doc.gif "00_phd_comics_final_doc"
+[01]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/01_fresh_github.png "01_fresh_github"
+[02]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/02_preferences.png "02_preferences"
+[03]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/03_login_info.png "03_login_info"
+[04]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/04_name_repo.png "04_name_repo"
+[05]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/05_locate_repo.gif "05_locate_repo"
+[06]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/06_create_txt.gif "06_create_txt"
+[07]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/07_commit_push.gif "07_commit_push"
+[08]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/08_verify.gif "08_verify"
+[09]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/01/gifs/09_verify.png "09_verify"
 
