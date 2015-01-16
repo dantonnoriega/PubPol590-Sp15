@@ -21,16 +21,17 @@ Canopy is a powerful Python Interactive Development Environment that is free for
 	![7][7]
 7. Once you finish the download, follow the installation instructions and just accept the defaults Canopy provides you with. It comes with more than plenty!
 
+---
+
 Post to Piazza if you have any questions or issues. I recommend you start playing around with Python, but no pressure!
 
-- Dan
 
-[1]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_1.png "canopy_1"
-[2]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_2.png "canopy_2"
-[3]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_3.png "canopy_3"
-[4]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_4.png "canopy_4"
-[5]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_5.png "canopy_5"
-[6]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_6.png "canopy_6"
-[7]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/Programming%20Notes/gifs/canopy_7.png "canopy_7"
+[1]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/canopy/canopy_1.png "canopy_1"
+[2]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/canopy/canopy_2.png "canopy_2"
+[3]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/canopy/canopy_3.png "canopy_3"
+[4]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/canopy/canopy_4.png "canopy_4"
+[5]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/canopy/canopy_5.png "canopy_5"
+[6]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/canopy/canopy_6.png "canopy_6"
+[7]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/canopy/canopy_7.png "canopy_7"
 
 
