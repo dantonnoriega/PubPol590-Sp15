@@ -118,19 +118,19 @@ You are now going to put everything together and create a local repository.After
 
 #### 1. Create a Local Repository
 Create a new folder on your computer that will house all your repositories. Name it something logical like "GitHub" or "Repositories". Let's assume you name it "GitHub". Next, go inside the folder and create another folder called "PubPol590". You can do this manually or using the Unix Command Line in the Terminal (Mac) or Git Bash (PC). In Unix command line, it would look something like this:  
-    ```
-    $ cd ~                      # change to home directory
-    $ mkdir GitHub              # create directory "GitHub"
-    $ cd GitHub                 # move inside "GitHub"
-    $ mkdir PubPol590           # create directory "PubPol590"
-    $ cd PubPol590              # move inside "PubPol590"
-    ```
+```
+$ cd ~                      # change to home directory
+$ mkdir GitHub              # create directory "GitHub"
+$ cd GitHub                 # move inside "GitHub"
+$ mkdir PubPol590           # create directory "PubPol590"
+$ cd PubPol590              # move inside "PubPol590"
+```
 
 Go to your new folder "PubPol590" using Unix command line and initialize the repository.
-    ```
-    $ cd ~/Github/PubPol590/        # move inside "PubPol590"
-    $ git init                      # initialize "PubPol590"
-    ```
+```
+$ cd ~/Github/PubPol590/        # move inside "PubPol590"
+$ git init                      # initialize "PubPol590"
+```
 
 #### 2. Create an Online Repository on Github
 [Login to your GitHub account](https://github.com/login). Make a new repository with the same name as your local repository (*PubPol590*):
