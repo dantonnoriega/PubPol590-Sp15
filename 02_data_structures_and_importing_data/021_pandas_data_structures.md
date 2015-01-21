@@ -108,3 +108,5 @@ In this class, we will stick to files that are less than 500 mb in size. This ca
 ---
 
 Next, we'll do a live demonstration.
+
+[osx_file_path]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/02/osx_file_path.gif "osx_file_path"
