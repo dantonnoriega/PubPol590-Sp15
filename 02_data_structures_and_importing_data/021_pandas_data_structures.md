@@ -1,9 +1,7 @@
 
 
----
-
-<span style="font-size: 250%">**Intro to Pandas**</span>
-<span style= "font-size: 170%">**Part 1 -** Data Structures and Importing Data</span>
+#Intro to Pandas
+**Part 1 -** Data Structures and Importing Data
 
 ---
 
