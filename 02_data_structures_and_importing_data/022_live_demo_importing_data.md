@@ -150,7 +150,7 @@ The **ONLY** way to get better at coding is to practice. I'm not a hacker badass
 ## Assignment
 To inspire you to practice (and to make up for lost time in class), here is your first assignment.
 
-1. Download this [**data**][4] and unzip it.
+1. Download this [**data**][4] and unzip it. It is password protected. Please check the announcements on Sakai for the password.
 2. Create a new python script and initialize it with the `import` etc. commands.
 3. Assign the main directory and files to a path
 4. Use the appropriate import function to import that data.
