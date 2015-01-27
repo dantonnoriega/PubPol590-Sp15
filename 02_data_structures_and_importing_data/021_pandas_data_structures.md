@@ -73,7 +73,7 @@ Moving forward, if you ever need to find the path of a file, you can use these t
 
 ###### A Special Note About Pathing In Mac Versus PC
 
-Paths are different for Mac and PC. For Macs, paths are joined by forward slashes (`/`). For PC, it is backslashes (`\`). Backslashes, however, are a special character reserved by Python. So, use forward-slashes (`/`).
+Paths are different for Mac and PC. For Macs, paths are joined by forward slashes (`/`). For PC, it is backslashes (`\`). Backslashes, however, are a special character reserved by Python (more about this later). You'll need to convert all backslashes (`\`) to forward-slashes (`/`).
 
 #### File Type and Delimiters
 The extension of a file tells us the file type. The file type will often also tell us what the delimiter is. The most common universal text file types for sharing small to moderately sized files are *CSV* and *TXT* files.
