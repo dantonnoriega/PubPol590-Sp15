@@ -66,10 +66,10 @@ Finding the path to a file is generally the first major headache programmers hav
 1. Locate the file or folder.
 2. Hold *shift* and right-click the file or folder you need to path.
 3. Select the option *copy as path* (or something like that).
-4. Paste wherever needed
+4. Paste wherever needed.
 5. Convert any backslashes (`\`) into a forward-slashes (`/`). Use the 'Find and Replace' in Canopy to do this quickly.
 
-Moving forward, if you ever need to find the path of a file, you can use this tricks to get it quickly!
+Moving forward, if you ever need to find the path of a file, you can use these tricks to get it quickly!
 
 ###### A Special Note About Pathing In Mac Versus PC
 
