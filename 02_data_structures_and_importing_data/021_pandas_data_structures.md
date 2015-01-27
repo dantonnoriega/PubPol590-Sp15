@@ -66,13 +66,14 @@ Finding the path to a file is generally the first major headache programmers hav
 1. Locate the file or folder.
 2. Hold *shift* and right-click the file or folder you need to path.
 3. Select the option *copy as path* (or something like that).
-4. Paste wherever needed.
+4. Paste wherever needed
+5. Convert any backslashes (`\`) into a forward-slashes (`/`). Use the 'Find and Replace' in Canopy to do this quickly.
 
 Moving forward, if you ever need to find the path of a file, you can use this tricks to get it quickly!
 
 ###### A Special Note About Pathing In Mac Versus PC
 
-Paths are different for Mac and PC. For Macs, paths are joined by forward slashes (`/`). For PC, it is backslashes (`\`). Also, in PC, paths must start with the drive name followed by a `:\\` *e.g.* `C:\\` or `D:\\`.
+Paths are different for Mac and PC. For Macs, paths are joined by forward slashes (`/`). For PC, it is backslashes (`\`). Backslashes, however, are a special character reserved by Python. So, use forward-slashes (`/`).
 
 #### File Type and Delimiters
 The extension of a file tells us the file type. The file type will often also tell us what the delimiter is. The most common universal text file types for sharing small to moderately sized files are *CSV* and *TXT* files.
