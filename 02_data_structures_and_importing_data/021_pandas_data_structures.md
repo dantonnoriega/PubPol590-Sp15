@@ -41,7 +41,7 @@ Before we jump into learning about pandas, it's best to go over a few things abo
 
 Importing data into pandas requires that you know 4 things about a raw data file:
 
-3. **path** *e.g.* `/Users/[username]/Desktop` (Mac) or `C:\\Users\[username]\` (PC)
+3. **path** *e.g.* `/Users/[username]/Desktop` (Mac) or `C:\Users\[username]\` (PC)
 1. **type** *e.g.* CSV file or XLS file 
 2. **delimiter** *e.g.* is it a comma, tab, space, etc. separating columns of data. This is generally a function of the file **type**.
 4. **size** *e.g.* 25 kb or 200 mb or 2 gb)
@@ -67,13 +67,13 @@ Finding the path to a file is generally the first major headache programmers hav
 2. Hold *shift* and right-click the file or folder you need to path.
 3. Select the option *Copy as path*.
 4. Paste wherever needed.
-5. Convert any backslashes (`\`) into a forward-slashes (`/`). Use the 'Find and Replace' in Canopy to do this quickly.
+5. *OPTIONAL*: Convert any backslashes (`\`) into a forward-slashes (`/`). Use the 'Find and Replace' in Canopy to do this quickly. Using `/` always works and sometimes using `/` can cause issues (though apparently not in pandas).
 
 Moving forward, if you ever need to find the path of a file, you can use these tricks to get it quickly!
 
 ###### A Special Note About Pathing In Mac Versus PC
 
-Paths are different for Mac and PC. For Macs, paths are joined by forward slashes (`/`). For PC, it is backslashes (`\`). Backslashes, however, are a special character reserved by Python (more about this later). You'll need to convert all backslashes (`\`) to forward-slashes (`/`).
+Paths are different for Mac and PC. For Macs, paths are joined by forward slashes (`/`). For PC, it is backslashes (`\`). Backslashes, however, are a special character reserved by Python (more about this later). To be safe, it is good practice to convert all backslashes (`\`) to forward-slashes (`/`) but it is not necessary.
 
 #### File Type and Delimiters
 The extension of a file tells us the file type. The file type will often also tell us what the delimiter is. The most common universal text file types for sharing small to moderately sized files are *CSV* and *TXT* files.
