@@ -177,7 +177,7 @@ Intro to pandas [**data structures**][3].
 [1]: http://pandas.pydata.org/pandas-docs/stable/index.html "index"   
 [2]: http://pandas.pydata.org/pandas-docs/stable/10min.html "10min"  
 [3]: http://pandas.pydata.org/pandas-docs/stable/dsintro.html "dsintro" 
-[4]: https://www.dropbox.com/s/kc4pcnc780pqjk2/File1_small.txt?dl=0 "CERS"
+[4]: https://www.dropbox.com/s/o80yx9xfqkzudb4/File1_small.txt?dl=0 "CERS"
 [live_demo]: https://www.dropbox.com/s/bjtu7s6mahon8hl/pandas_part_1_live_demo.mov?dl=0 "live_demo"
 [main_dir]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/02/main_dir.png "osx_file_path"
 [file_path]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/02/file_path.png "osx_file_path"
