@@ -8,9 +8,9 @@ We are going to jump straight into coding. It is best to learn by example and pr
 ### Outline
 
 1. Python data types
-	2. String: `str`, `unicode`
-	3. Numeric: `int`, `float`, `long`
-	4. Logical: `bool`
+	- String: `str`, `unicode`
+	- Numeric: `int`, `float`, `long`
+	- Logical: `bool`
 5. List and tuples
 	- `append` and `extend`
 	- `len` function
@@ -24,35 +24,41 @@ We are going to jump straight into coding. It is best to learn by example and pr
 	- one-line `for` loops
 	- `enumerate` for objects
 	- `iteritems` module for Series and DataFrame
-5. Checking data types
-	- `isinstance` function
 5. Dealing with missing data
-	8. missing data types
-		- null (or `NaN`) and na (or `NA`)
-	6. option `na_values` within `read_table` and `read_csv`
+	- Option `na_values` within `read_table` and `read_csv`
+	- Missing data types
+		- null/missing values (`NaN`) aka "not a number"
+		- pandas `isnull` to find missing values (also `np.isnan`)
+		- pandas `notnull` to find non missing values
+	- Filling in and Dropping missing values
+		- `fillna`
+		- `dropna`
 7. Finding duplicate values
+	- `duplicated` to find duplicated values
+		- option for duplicated `take_last` i.e. `df.duplicated(take_last = True)` 
+	- `drop_duplicates` for dropping duplicates
 8. Transforming, dropping, and imputing/replacing values
 5. Date and Time
-	6. `datetime` module/toolkit
+	- `datetime` module/toolkit
 		- `datetime` `date` and `time` types
-	7. Methods
+	- Methods
 		- `year` `month` and `day`
 		- `timedelta` 
 5. General tools for strings
-	6. Converting case
+	- Converting case
 		- `lower` and `upper`
-	6. Splitting and joining
+	- Splitting and joining
 		- `split` and `join`
-	7. Removing whitespace
+	- Removing whitespace
 		- `strip` `rstring` and `lstrip`
-	8. Find if, and how many, characters or substrings exists within a string
+	- Find if, and how many, characters or substrings exists within a string
 		- `in`
 		- `endswith` and `startswith`
 		- `count`
-	9. Find where characters or substrings are located within a string
+	- Find where characters or substrings are located within a string
 		- `find` and `rfind`
 		- `index`
-	10. Replacing characters or substrings located within a string
+	- Replacing characters or substrings located within a string
 		- `replace`
 17. Other methods for cleaning up vectorized strings in pandas
 	- `cat` to concatenate
@@ -64,15 +70,15 @@ We are going to jump straight into coding. It is best to learn by example and pr
 	- `center`
 	- `repeat`
 11. Regular Expressions (or regex) (aka "badass tools for strings")
-	13. Syntax overview of regular expressions
+	- Syntax overview of regular expressions
 		- pythex.org
-	12. The `re` module
-	13. Compiling a regular expression with `re.compile`
-		14. Pattern matching
+	- The `re` module
+	- Compiling a regular expression with `re.compile`
+		- Pattern matching
 			- `findall`
-		15. Substitution
+		- Substitution
 			- `sub` and `subn`
-		16. Splitting
+		- Splitting
 			- `split`
 
 ---
