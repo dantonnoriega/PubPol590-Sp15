@@ -22,7 +22,7 @@ Your task is to do the following:
 3. Find which rows of variable/column/Series `consump` are missing then extract the FULL rows from the dataframe. In short, look at the full rows of data where `consump` has missing data.
 4. Check for any duplicated values on the SUBSET of `panid` and `date`. That is, search to see if any participant has duplicated dates. *Drop the rows where `consump` is missing for any duplicated values.*
 5. Take the cleaned data set and then take the average (mean) of variable `consump`.  
-	**HINT:** to find the overall mean of variable `panid` in DatFrame `df`, I would run `df['panid'].mean()` or `df.panid.mean()`
+	**HINT:** to find the overall mean of variable `panid` in DataFrame `df`, I would run `df['panid'].mean()` or `df.panid.mean()`
 
 
 
