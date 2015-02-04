@@ -41,7 +41,16 @@
 	- `duplicated` to find duplicated values
 		- option for duplicated `take_last` i.e. `df.duplicated(take_last = True)` 
 	- `drop_duplicates` for dropping duplicates
-8. Transforming, dropping, and imputing/replacing values
+7. Copying data sets with `copy`
+8. Replacing values
+	- `replace` to replace values
+	- `map` to replace values
+9. Merging Data
+	- `pandas.merge` to merge data
+		+ options `on`
+		- options `how = 'inner'` and `how = 'outer'`
+			+ `'inner'` a merge using the intersection
+			+ `'outer'` is a merge using with the union
 
 
 ---
