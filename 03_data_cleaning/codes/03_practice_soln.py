@@ -17,6 +17,9 @@ df1[df1.consump.isnull()] # investigate data where 'consump' is empty (null)
 
 df1[df1.duplicated(['panid', 'date'])] # look at duplicated (first hit from top-bottom) using 'panid' and 'date' as criteria
 df1[df1.duplicated(['panid', 'date'], take_last = True)] # same but bottom to top
+t_b = df1.duplicated(['panid', 'date'])
+b_t = df1.duplicated(['panid', 'date'], take_last = True)
+df1[ (t_b | b_t) ]
 
 df2 = df1.drop_duplicates(['panid', 'date'], take_last = True) # this will keep the bottom to top
 
