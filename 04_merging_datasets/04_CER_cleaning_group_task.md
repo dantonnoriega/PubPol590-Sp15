@@ -1,24 +1,39 @@
-# 04 Group Task - CER Data Cleaning and Merging
+# 04 Group Task
+#### CER Data Cleaning and Merging
 
-## Background
+---
 
-We know there are issues with the data. We need to fix them.
-
-The known issues can be found [**here**](http://www.ucd.ie/issda/data/commissionforenergyregulationcer/).
+### DUE DATE is **Wednesday 2/11 at 3 pm**
+This is assignment is due before class next week -- **Wednesday 2/11 at 3 pm**.
 
 ## Set-Up
 
 Each group should have set up a team repository. 
 
-**For your group to receive credit for this assignment, each group must:** 
+**For your group to receive credit for this assignment, your group must:** 
 
-1. Add me as a collaborator to the group repository on GitHub. 
+1. Add me as a collaborator to the group repository on GitHub...
 	2. Have the owner of the group repo go into the repo on GitHub.
 	3. Click *Settings* on the right hand side.
 	4. Under *Settings*, click on *Collaborators* on the left hand side.
 	5. Please look for and add *DRNoriega*.
+
+	Here is an example gif:  
+	![add_collab](https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/04/add_collaborator.gif)
+	
 2. Each group must push their code to GitHub to receive credit for the assignment.
-3. **NOTE:** I have *not* yet taught folks how to collaborate in groups on GitHub aka [*GitHub Flow](https://guides.github.com/introduction/flow/index.html). Therefore, I *highly recommend* you work together, in-person, and have only *one* person pushing edits to the repo. Since you all have access to the repo, you will step on each others toes if you all work on the same file at the same time. This is possible once you learn how to *branch* and *merge* but that is something best learned together in class.
+
+**NOTE:** I have *not* yet taught folks how to collaborate in groups on GitHub (aka [**GitHub Flow**](https://guides.github.com/introduction/flow/index.html)). Therefore, I *highly recommend* you work together, in-person, and have only *one* person pushing edits to the repo. Since you all have access to the repo, you will step on each others toes if you all work on the *same* file at the same time. This is possible once you learn how to *branch* and *merge* but that is something best learned together in class.
+
+That said, you're more than welcome to work on *separate* files within the same repo, just as long as you make very clear which code is the one you want graded.
+
+---
+
+## Background
+
+We know there are issues with the CER data. Before we can do any analysis, we need to fix them.
+
+The known issues can be found [**here**](http://www.ucd.ie/issda/data/commissionforenergyregulationcer/).
 
 ## Group Task
 
@@ -29,4 +44,27 @@ Get into your groups and accomplish the following:
 3. Stack the data
 4. Merge the data
 
-Yes, this is vague. That's the point! I'll give you some hints as the class proceeds.
+Yes, this is vague, but that's the point. It's an outline of what any researcher has to do given any new data set. 
+
+It suppose to be challenging, so work in groups. I'll give you some video hints before the weekend. 
+
+## Grading
+
+Criteria | %  	
+--------------------------------|------
+Fixing errors listed in CER FAQ |	**80%** 
+Concise and easy to read code 	|	**10%**  
+Runs Out-of-the-Box				|	**10%**  
+
+FYI, "Runs Out-of-the-Box" means that the code, after changing main directory and file paths, runs without any problems. In other words, if I have to debug your code (besides changing paths), you will lose 10% of your grade. 
+
+The only thing worse than debugging your own code is debugging someone else's!
+
+## Extra Credit
+
+Bonus | +%
+------------|-------
+Finding undocumented errors | +**20%**
+
+If you find any strange stuff in the data that was not talked about the CER FAQ, you can get a 20% bonus to your grade.
+
