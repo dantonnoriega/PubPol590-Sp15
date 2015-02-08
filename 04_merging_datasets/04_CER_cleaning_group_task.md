@@ -3,6 +3,14 @@
 
 ---
 
+###UPDATE
+
+Some videos covering advanced pathing and stacking are now available. There are two videos because I stopped one short by accident; [**Part 1**](https://www.dropbox.com/s/pntzg5tb54ip6oa/6_advanced_pathing_and_stacking.mov?dl=0) and [**Part 2**](https://www.dropbox.com/s/e0if1ecyzclrpph/6_advanced_pathing_and_stacking_2.mov?dl=0). These should help you with the group task. 
+
+Remember, you need to download the files to get the full videos and the best quality.
+ 
+You can also find the codes I practiced with and the codes from the video [**here**](https://github.com/ultinomics/Duke_PUBPOL590/tree/master/04_merging_datasets/codes). The folder *dans_practice* has what I did to teach myself and *online_demo* is what I did in the vid.
+ 
 ### DUE DATE is **Wednesday 2/11 at 3 pm**
 This is assignment is due before class next week -- **Wednesday 2/11 at 3 pm**.
 
