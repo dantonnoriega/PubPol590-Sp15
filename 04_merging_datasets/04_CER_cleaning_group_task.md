@@ -52,10 +52,16 @@ Get into your groups and accomplish the following:
 	- skip the first 6 million rows of each consumption data file and then import the next 1.5 million using the `read_table` options `skiprows` and `nrows`.
 
 	Example: if I want to skip the first 100 rows of file `abc.txt` and then read the next 200 (so rows 101 to 301), I would write:
-	```
+	```python
 		pd.read_table('path/abc.txt', skiprows = 100, nrows = 200)
 	```
 3. Stack the data
+	- **HINT**: After you stack the data, I recommend removing any of the old DataFrames you had using `del`. For example, if I stack `df1` and `df2`, I should then remove them using `del df1, df2`.
+	
+	```python
+		df_stack = pd.concat([df1, df2], ignore_index = True)
+		del df1, df2
+	```
 4. Clean the data
 4. Merge the data
 
