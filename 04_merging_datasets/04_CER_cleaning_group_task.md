@@ -14,6 +14,8 @@ You can also find the codes I practiced with and the codes from the video [**her
 ### DUE DATE is **Wednesday 2/11 at 3 pm**
 This is assignment is due before class next week -- **Wednesday 2/11 at 3 pm**.
 
+*EXTRA CREDIT* is available for teams who put in extra effort and time to load, clean, and explore the full data set -- not just the subset.
+
 ## Set-Up
 
 Each group should have set up a team repository. 
@@ -48,7 +50,7 @@ The known issues can be found [**here**](http://www.ucd.ie/issda/data/commission
 Get into your groups and accomplish the following:
 
 1. Download all the raw data [**here**](https://www.dropbox.com/sh/1srhgvqywye06a7/AACQ2j7r11wCfoY8HcpsHelfa?dl=0)
-2. Import **part** the data
+2. Import **part** (a subset) of the data
 	- skip the first 6 million rows of each consumption data file and then import the next 1.5 million using the `read_table` options `skiprows` and `nrows`.
 
 	Example: if I want to skip the first 100 rows of file `abc.txt` and then read the next 200 (so rows 101 to 301), I would write:
@@ -73,7 +75,7 @@ It suppose to be challenging, so work in groups. I'll give you some video hints 
 
 Criteria | %  	
 --------------------------------|------
-Fixing errors listed in CER FAQ |	**80%** 
+Fixing errors listed in CER FAQ for the subset |	**80%** 
 Concise and easy to read code 	|	**10%**  
 Runs Out-of-the-Box				|	**10%**  
 
@@ -81,11 +83,13 @@ FYI, "Runs Out-of-the-Box" means that the code, after changing main directory an
 
 The only thing worse than debugging your own code is debugging someone else's!
 
-## Extra Credit
+## Extra Credit (FULL DATA SET)
+
+If you're patient and worked hard to import and explore the full data set, you can get extra credit.
 
 Bonus | +%
 ------------|-------
-Finding undocumented errors | +**20%**
+Finding undocumented errors in the ENTIRE dataset | +**20%**
 
-If you find any strange stuff in the data that was not talked about the CER FAQ, you can get a 20% bonus to your grade.
+If you find any strange stuff in the entire data set that was not talked about the CER FAQ, you can get a 20% bonus to your grade.
 
