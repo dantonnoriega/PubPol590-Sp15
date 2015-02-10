@@ -48,8 +48,15 @@ The known issues can be found [**here**](http://www.ucd.ie/issda/data/commission
 Get into your groups and accomplish the following:
 
 1. Download all the raw data [**here**](https://www.dropbox.com/sh/1srhgvqywye06a7/AACQ2j7r11wCfoY8HcpsHelfa?dl=0)
-2. Import the data and clean it
+2. Import **part** the data
+	- skip the first 6 million rows of each consumption data file and then import the next 1.5 million using the `read_table` options `skiprows` and `nrows`.
+
+	Example: if I want to skip the first 100 rows of file `abc.txt` and then read the next 200 (so rows 101 to 301), I would write:
+	```
+		pd.read_table('path/abc.txt', skiprows = 100, nrows = 200)
+	```
 3. Stack the data
+4. Clean the data
 4. Merge the data
 
 Yes, this is vague, but that's the point. It's an outline of what any researcher has to do given any new data set. 
