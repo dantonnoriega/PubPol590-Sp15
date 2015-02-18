@@ -3,6 +3,7 @@ from pandas import Series, DataFrame
 import pandas as pd
 import numpy as np
 import os
+import matplotlib.pyplot as plt
 
 main_dir = "/Users/dnoriega/GitHub/Duke_PUBPOL590/"
 root = main_dir + "05_grouping_and_balance/data/"
@@ -69,8 +70,28 @@ trt = {k[1]: df.kwh[v].values for k, v in grp.groups.iteritems() if k[0] == 'T'}
 ctrl = {k[1]: df.kwh[v].values for k, v in grp.groups.iteritems() if k[0] == 'C'}
 keys = trt.keys()
 
-# comparisons!
-diff = {k: (trt[k].mean() - ctrl[k].mean()) for k in keys}
-tstats = {k: float(ttest_ind(trt[k], ctrl[k], equal_var = False)[0]) for k in keys}
-pvals = {k: float(ttest_ind(trt[k], ctrl[k], equal_var = False)[1]) for k in keys}
-t_p = {k: (tstats[k], pvals[k]) for k in keys}
+
+# create dataframes of this information
+tstats = DataFrame([(k, np.abs(ttest_ind(trt[k], ctrl[k], equal_var=False)[0])) for k in keys],
+    columns = ['date', 'tstat'])
+pvals = DataFrame([(k, np.abs(ttest_ind(trt[k], ctrl[k], equal_var=False)[1])) for k in keys],
+    columns = ['date', 'pval'])
+t_p = pd.merge(tstats, pvals)
+
+## sort and reset_index
+t_p.sort(['date'], inplace=True)
+t_p = t_p.sort(['date']) # equivalent, but slow
+t_p.reset_index(inplace=True, drop=True)
+
+
+# PLOTTING ----------------------------
+fig1 = plt.figure() # initialize plot
+ax1 = fig1.add_subplot(2,1,1) # two rows, one column, first plot
+ax1.plot(t_p['date'], t_p['tstat'])
+ax1.axhline(2, color='r', linestyle='--')
+ax1.set_title('t-stats over-time')
+
+ax2 = fig1.add_subplot(2,1,2) # two rows, one column, first plot
+ax2.plot(t_p['pval'])
+ax2.axhline(0.05, color='r', linestyle='--')
+ax2.set_title('p-values over-time')
