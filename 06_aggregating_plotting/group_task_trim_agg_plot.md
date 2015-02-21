@@ -30,21 +30,21 @@ Reproduce the following 2 graphs (does not have to be exactly the same -- the da
 	![2][2]
 
 
-
 ## Algorithm Outline
 
-1. Import and stack the entire data set (like in the last group task)
+1. Import and stack the all the consumption data.
+2. Clean the data.
 2. Merge and trim the data, keeping only *Residential Homes* that are in the *Control* or in the *Bi-Monthly Only Stimulus* and *Tariff A*.
-3. Group and aggregate the data by day and by month
+3. Group and aggregate the data by day and by month.
 4. Plot the t-values and p-values over time (day and month).
 
 ## Hints
-You can find hints in the [**latest online demo**](https://www.dropbox.com/sh/ccrvzpz5ynym5gn/AACV-MjrL9X01TSBkfLl3CQLa?dl=0) on aggregating.
 
-Here is a snippet of code from my practice file located on github in `/06_aggregating_plotting/codes/dans_practice/9_aggregating.py`. Compared to the code used in the online demo, I use a 'Year-Month-Day' (aka 'ymd') date format for each day, instead of the tuple `(year, month, day)`:
+1. You can find hints in the [**latest online demo**](https://www.dropbox.com/sh/ccrvzpz5ynym5gn/AACV-MjrL9X01TSBkfLl3CQLa?dl=0) on aggregating.
+2. The dataset `timeseries_correction.csv` located at `06_aggregating_plotting/data/timeseries_correction.csv` on github, used correctly, can help trim a lot of the odd date issues in the CER data.
+3. Here is a snippet of code from my practice file located on github in `/06_aggregating_plotting/codes/dans_practice/9_aggregating.py`. Compared to the code used in the online demo, I use a 'Year-Month-Day' (aka 'ymd') date format for each day, instead of the tuple `(year, month, day)`:
 
 ```python
-
 # ADD/DROP VARIABLES ---------------------------
 df['year'] = df['date'].apply(lambda x: x.year)
 df['month'] = df['date'].apply(lambda x: x.month)
