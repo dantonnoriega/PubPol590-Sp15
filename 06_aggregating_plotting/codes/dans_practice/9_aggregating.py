@@ -23,19 +23,20 @@ df = pd.merge(df, df_assign)
 # ADD/DROP VARIABLES ---------------------------
 df['year'] = df['date'].apply(lambda x: x.year)
 df['month'] = df['date'].apply(lambda x: x.month)
-df['day'] = df['date'].apply(lambda x: x.day)
+df['day'] = df['date'].apply(lambda x: x.day) # x.day returns integer; x.date() returns date object
+df['ymd'] = df['date'].apply(lambda x: x.date()) # notice the parentheses in `.date()`
 
 # DAILY AGGREGATION --------------------
-grp = df.groupby(['year', 'day', 'panid', 'assignment'])
+grp = df.groupby(['ymd', 'panid', 'assignment'])
 agg = grp['kwh'].sum()
 
 # reset the index (multilevel at the moment)
 agg = agg.reset_index() # drop the multi-index
-grp = agg.groupby(['year', 'day', 'assignment'])
+grp = agg.groupby(['ymd', 'assignment'])
 
 ## split up treatment/control
-trt = {(k[0], k[1]): agg.kwh[v].values for k, v in grp.groups.iteritems() if k[2] == 'T'} # get set of all treatments by date
-ctrl = {(k[0], k[1]): agg.kwh[v].values for k, v in grp.groups.iteritems() if k[2] == 'C'} # get set of all controls by date
+trt = {k[0]: agg.kwh[v].values for k, v in grp.groups.iteritems() if k[1] == 'T'} # get set of all treatments by date
+ctrl = {k[0]: agg.kwh[v].values for k, v in grp.groups.iteritems() if k[1] == 'C'} # get set of all controls by date
 keys = ctrl.keys()
 
 ## better yet, make dfs!

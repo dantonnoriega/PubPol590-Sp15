@@ -13,7 +13,7 @@ An important part of doing analysis of any Randomized Controlled Trail (RCT) is 
 
 When dealing with observations over-time, checking for balance generally has a step where data is aggregated into longer time intervals (minutes/hours are aggregated to days or months). This is because it is unlikely that behavior for *any* household, regardless of assignment status, is similar from minute to minute or hour to hour. But over longer spans of time, trends appear and behavior will converge to a certain patter (thanks "law of large numbers").
 
-Imagine to blizzard occurring at the same time but in different locations. Once snow storm drops on average 1 cm per hour, the other 1.1 cm. If you only compare how much snow falls hour to hour, ignoring what was accumulated before, it will be difficult to figure out which blizzard is dropping more snow. But if you sum up all the snow dropped over the entire day, it will be much more clear which blizzard was more powerful.
+Imagine two blizzard occurring at the same time but in different locations. Once snow storm drops on average 1 cm per hour, the other 1.1 cm. If you only compare how much snow falls hour to hour, ignoring what was accumulated before, it will be difficult to figure out which blizzard is dropping more snow. But if you sum up all the snow dropped over the entire day, it will be much more clear which blizzard was more powerful.
 
 The CER data at the moment takes 30 minute smart meter readings. Comparing households at such small intervals will yield muddled results. But over the span of a day (or month) consumption behavior for a house will normalize to a distinguishable pattern. It is therefore incredibly important that we aggregate consumption data over longer time intervals.
 
@@ -40,6 +40,30 @@ Reproduce the following 2 graphs (does not have to be exactly the same -- the da
 
 ## Hints
 You can find hints in the [**latest online demo**](https://www.dropbox.com/sh/ccrvzpz5ynym5gn/AACV-MjrL9X01TSBkfLl3CQLa?dl=0) on aggregating.
+
+Here is a snippet of code from my practice file located on github in `/06_aggregating_plotting/codes/dans_practice/9_aggregating.py`. Compared to the code used in the online demo, I use a 'Year-Month-Day' (aka 'ymd') date format for each day, instead of the tuple `(year, month, day)`:
+
+```python
+
+# ADD/DROP VARIABLES ---------------------------
+df['year'] = df['date'].apply(lambda x: x.year)
+df['month'] = df['date'].apply(lambda x: x.month)
+df['day'] = df['date'].apply(lambda x: x.day) # x.day returns integer; x.date() returns date object
+df['ymd'] = df['date'].apply(lambda x: x.date()) # notice the parentheses in `.date()`
+
+# DAILY AGGREGATION --------------------
+grp = df.groupby(['ymd', 'panid', 'assignment'])
+agg = grp['kwh'].sum()
+
+# reset the index (multilevel at the moment)
+agg = agg.reset_index() # drop the multi-index
+grp = agg.groupby(['ymd', 'assignment'])
+
+## split up treatment/control
+trt = {k[0]: agg.kwh[v].values for k, v in grp.groups.iteritems() if k[1] == 'T'} # get set of all treatments by date
+ctrl = {k[0]: agg.kwh[v].values for k, v in grp.groups.iteritems() if k[1] == 'C'} # get set of all controls by date
+keys = ctrl.keys()
+```
 
 ## Grading
 
