@@ -31,18 +31,15 @@ Reproduce the following 2 graphs (does not have to be exactly the same -- the da
 
 
 
-## Algorithm Hints
-
-How to aggregate:
+## Algorithm Outline
 
 1. Import and stack the entire data set (like in the last group task)
 2. Merge and trim the data, keeping only *Residential Homes* that are in the *Control* or in the *Bi-Monthly Only Stimulus* and *Tariff A*.
-3. Group and do a two sample t-test
-4. Plot the t-values over time.
+3. Group and aggregate the data by day and by month
+4. Plot the t-values and p-values over time (day and month).
 
-
-[1]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/06/06_monthly.png "monthly"
-[2]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/06/06_daily.png "daily"
+## Hints
+You can find hints in the [**latest online demo**](https://www.dropbox.com/sh/ccrvzpz5ynym5gn/AACV-MjrL9X01TSBkfLl3CQLa?dl=0) on aggregating.
 
 ## Grading
 
@@ -56,7 +53,8 @@ Runs Out-of-the-Box				|	**+1**
 Only 1 Correct Graphs 			|	**+6**
 
 
-
+[1]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/06/06_monthly.png "monthly"
+[2]: https://raw.githubusercontent.com/ultinomics/Duke_PUBPOL590/master/figs/06/06_daily.png "daily"
 
 
 
