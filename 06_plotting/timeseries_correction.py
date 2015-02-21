@@ -11,6 +11,8 @@ from datetime import datetime, timedelta
 
 main_dir = "/Users/dnoriega/GitHub/Duke_PUBPOL590/"
 root = main_dir + "06_plotting/data/"
+
+
 # TIMESERIES CORRECTION -----------------------------------
 start = time.time()
 
@@ -31,8 +33,8 @@ ts = pd.to_datetime(ts) # convert to np.ndarray
 tznames = [v.tzname() for v in ts]
 
 ## create a DataFrame to link corrected time data with actual data in 'df'
-df_ts = pd.DataFrame(zip(ts, ts.date, ts.day, ts.hour, ts.minute, tznames),
-    columns = ['ts', 'date', 'day', 'hour', 'minute', 'tz'])
+df_ts = pd.DataFrame(zip(ts, ts.date, ts.year, ts.month, ts.day, ts.hour, ts.minute, tznames),
+    columns=['ts', 'date', 'year', 'month', 'day', 'hour', 'minute', 'tz'])
 df_ts['hour_cer'] = df_ts.groupby('date').cumcount() + 1 # create a counter that span the 30 min intervals
 
 # link dates to cer day
@@ -40,10 +42,10 @@ cer_day_link = DataFrame({'date': pd.unique(df_ts['date'])}) # find all unique d
 cer_day_link['day_cer'] = cer_day_link.index + 1 # link dates to the day counter (just index + 1)
 
 # merge the dataframe, linking the CER format to DST corrected time values
-df_ts = pd.merge(df_ts, cer_day_link, on = 'date')
+df_ts = pd.merge(df_ts, cer_day_link, on='date')
 
 end = time.time()
-print 'total time time series correction...', end - start, 'seconds'
+print 'total time series correction...', end - start, 'seconds'
 
 # EXPORT ------------------
 df_ts.to_csv(root + "timeseries_correction.csv")

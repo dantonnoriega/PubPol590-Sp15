@@ -6,6 +6,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
+
 main_dir = "/Users/dnoriega/GitHub/Duke_PUBPOL590/"
 
 # ADVANCED PATHING ------------------------------------
