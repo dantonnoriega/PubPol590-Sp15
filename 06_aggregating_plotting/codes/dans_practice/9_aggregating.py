@@ -11,7 +11,7 @@ from scipy.stats import ttest_ind
 main_dir = "/Users/dnoriega/GitHub/Duke_PUBPOL590/"
 
 # ADVANCED PATHING ------------------------------------
-root = main_dir + "06_aggregating_plotting/data/"
+root = main_dir + "/data/"
 
 # IMPORT DATA ------------------------------------
 df = pd.read_csv(root + "sample_30min.csv", header=0, parse_dates = [1])

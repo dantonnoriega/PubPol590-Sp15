@@ -53,4 +53,4 @@ np.random.seed(1789)
 df = gen_kwh_data(start_datetime, end_datetime, delta, ids)
 
 # export a csv copy without index
-df.to_csv("/Users/dnoriega/Desktop/30min_samples.csv", index = 0)
+df.to_csv("/Users/dnoriega/Desktop/samples_30min.csv", index = 0)
