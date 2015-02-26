@@ -46,10 +46,10 @@ df1a['day_str'] = ['0' + str(v) if v < 10 else str(v) for v in df1a['day']] # ad
 df1a['kwh_ymd'] = 'kwh_' + df1a.year.apply(str) + '_' + df1a.month.apply(str) + '_' + df1a.day_str.apply(str)
 
 # if you use 'ymd', you can skip this string play
-df1b['kwy_ymd'] = 'kwh_' + df1b.ymd.apply(str)
+df1b['kwh_ymd'] = 'kwh_' + df1b.ymd.apply(str)
 
 # pivot on the new column name
-df1_piv = df1a.pivot('panid', 'kwh_ymd', 'kwh')
+df1_piv = df1b.pivot('panid', 'kwh_ymd', 'kwh')
 
 # the panids become the index. lets reset it.
 df1_piv.reset_index(inplace=True)
