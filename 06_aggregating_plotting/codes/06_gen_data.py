@@ -1,4 +1,4 @@
-## group task practice
+## gen data
 from __future__ import division
 from pandas import Series, DataFrame
 import pandas as pd

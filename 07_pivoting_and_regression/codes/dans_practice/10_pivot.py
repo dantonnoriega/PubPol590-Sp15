@@ -12,7 +12,8 @@ main_dir = "/Users/dnoriega/GitHub/Duke_PUBPOL590/"
 root = main_dir + "/data/"
 
 # IMPORT DATA ------------------------------------
-df = pd.read_csv(root + "sample_30min.csv", header=0, parse_dates=[1], date_parser=parser.parse)
+df = pd.read_csv(root + "sample_30min.csv", header=0, parse_dates=[1],
+    date_parser=parser.parse)
 df_assign = pd.read_csv(root + "sample_assignments.csv", usecols = [0,1])
 
 
