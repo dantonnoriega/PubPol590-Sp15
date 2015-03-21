@@ -38,9 +38,9 @@ df_piv.columns.name = None # remove the label of columns (confusing)
 df = pd.merge(df_assign, df_piv) # want the other info to be first in column order
 del df_piv, df_assign
 
-## GENERATE DUMMIES FOR ANY CATEGORY (non-numeric) VARIABLE --------
+## GENERATE DUMMIES VARIABLES --------
 ## by default, will make dummy vectors for ALL "object" or "category" types
-df1 = pd.get_dummies(df)
+df1 = pd.get_dummies(df, columns = 'gender')
 df1.drop(['gender_M'], axis = 1, inplace = True)
 
 ## SET UP DATA ---------------------
