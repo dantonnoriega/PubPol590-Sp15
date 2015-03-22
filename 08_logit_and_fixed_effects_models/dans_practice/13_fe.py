@@ -39,6 +39,9 @@ df.reset_index(drop=True, inplace=True)
 ## SET UP DATA
 from fe_functions import demean # demean.py must be within the same folder as your code
 
+df['P'] = 0 + (df['ym'] > 541) # post treatment indicator
+df['TP'] = df['T']*df['P']
+
 df['log_kwh'] = df['kwh'].apply(np.log)
 cols = ['log_kwh', 'TP', 'P']
 panid = 'panid'
@@ -50,8 +53,9 @@ df_dm = demean(df, cols, 'panid')
 mu = pd.get_dummies(df['ym'], prefix = "ym").iloc[:, 1:-1] # get time control dummies from `df`
 y = df_dm['log_kwh'] # demean values from `df_dm`
 X = df_dm[['TP', 'P']]
+X = sm.add_constant(X)
 
-fe_model = sm.OLS(y_dm, pd.concat([X_dm, mu], axis=1)) # linearly prob model
+fe_model = sm.OLS(y, pd.concat([X, mu], axis=1)) # linearly prob model
 fe_results = fe_model.fit() # get the fitted values
 print(fe_results.summary()) # print pretty results (no results given lack of obs)
 

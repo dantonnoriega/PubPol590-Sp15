@@ -27,7 +27,6 @@ def se_cluster(fe_results, df, group):
     degrees of freedom adjustment for nested-within-cluster std. err.
         see http://www.stata.com/statalist/archive/2013-01/msg00596.html
     """
-    import numpy as np
     from numpy.linalg import matrix_rank
     from statsmodels.stats.sandwich_covariance import cov_cluster
 
