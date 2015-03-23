@@ -90,7 +90,7 @@ df_ts = pd.merge(df_ts, cer_day_link, on='date')
 
 # CER ANOMOLY CORRECTION
 ## see http://pandas.pydata.org/pandas-docs/stable/indexing.html#advanced-indexing-with-labels
-df_ts.ix[df_ts['day_cer'] == 452, 'hour_cer'] = np.array([v for v in range(1, 49) if v not in [2, 3]])
+df_ts.ix[df_ts['day_cer'] == 452, 'hour_cer'] = np.array([v for v in range(1,49) if v not in [2,3]])
 
 end = time.time()
 print 'total time series correction...', end - start, 'seconds'

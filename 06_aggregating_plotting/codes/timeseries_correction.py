@@ -10,7 +10,7 @@ import pytz
 from datetime import datetime, timedelta
 
 main_dir = "/Users/dnoriega/GitHub/Duke_PUBPOL590/"
-root = main_dir + "06_aggregating_plotting/data/"
+root = main_dir + "data/"
 
 
 # TIMESERIES CORRECTION -----------------------------------
