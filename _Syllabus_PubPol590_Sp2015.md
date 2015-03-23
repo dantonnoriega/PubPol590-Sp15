@@ -98,38 +98,53 @@ The Smart Metering Gas Customer Behaviour Trials (CBTs) took place during 2010 
 
 Further information is available at the [**following link**](http://www.ucd.ie/issda/data/commissionforenergyregulationcer/) and will be discussed in class.
 
+
 ## Course Outline
 
-(See separate course reading list for weekly readings. Please remember
-that the readings will update over the course of the semester to reflect
-progress.)
-
 1.  Introduction to Big Data
-    a.  Definitions and core ideas
-    b.  Best practices in data science
-    c.  Introduction to GitHub and Python
+    -  Definitions and core ideas
+    -  Best practices in data science
+    -  Introduction to GitHub and Python
 2.  Acquiring Energy Data
-    a.  Legal aspects
-    b.  Privacy and confidentiality
-    c.  Metadata
-    d.  Anonymization
+    -  Legal aspects
+    -  Privacy and confidentiality
+    -  Metadata
+    -  Anonymization
 3.  Data Wrangling
-    a.  Cleaning and manipulating data
-    b.  Missing data
-    c.  Sorting, re-shaping, and subsampling
-    d.  Delivering summary statistics
+    -  Cleaning and manipulating data
+    -  Missing data
+    -  Sorting, re-shaping, and subsampling
+    -  Delivering summary statistics
 4.  Basic visualization techniques
-    a.  Clustering and Aggregation
+    -  Clustering and Aggregation
 5.  Panel data regression techniques for large dimensional models
-    a.  The importance of individual heterogeneity
-    b.  Experimental methods 
-    c.  Differences-in-differences
-    d.  Selection: matching and instrumental variables
-6.  Predictive analytics
-    a.  Time series techniques
-    b.  Forecasting
-7.  Data reduction
+    -  The importance of individual heterogeneity
+    -  Experimental methods 
+    -  Differences-in-differences
+    -  Selection: matching and instrumental variables
 8.  Customer segmentation and classification
+	- Logit
+	- Overfitting and Resampling
+	- Similarity and Nearest Neighbor
 9.  Implications of data analytics for program design and program evaluation in data-rich environments
+	- Propensity score matching 
 10. Translating data science into actionable policy
+7.  Data reduction
+6.  Predictive analytics
+    -  Time series techniques
+    -  Forecasting
+   
+   
+## Anticipated Schedule and Due Dates
 
+|Date | Topics and Deadlines|
+|:----|:----------------------|
+Mar 18 | Classification/Logit
+Mar 25 | Overfitting/Resampling; Execute classification task
+Apr 1  | Similarity/Neighbors
+Apr 8  | Propensity scores/Evaluation; Execute matching task
+	   | **DUE DATE -- ASSN 3: Regression And Classification Assignment**
+Apr 15 | Dimension reduction/PCA/Random Matrix Theory
+Apr 22 | Prediction; Execute PCA+Heterogeneous Treatment Effects
+	   | **DUE DATE -- ASSN 4: Evaluation Assignment**
+Apr 30  | **INDIVIDUAL FINAL DUE @ 11:59 PM**
