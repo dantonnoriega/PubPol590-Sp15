@@ -5,7 +5,7 @@ One of the advantages of Big Data is that often one need only draw one (or multi
 For this task, we will be running a logit model to check for any evidence of imbalance. We will need a subsample of residential households from both the treatment and control groups, their pre-trial consumption data, and their pre-trail survey data.
 
 ## Set-Up
-Download all the necessary files [**here**][https://www.dropbox.com/sh/j34pxsi8azvudvw/AABm6Syp2cnxyig6sO-qGNFia?dl=0]. Password is the usual.
+Download all the necessary files [**here**](https://www.dropbox.com/sh/j34pxsi8azvudvw/AABm6Syp2cnxyig6sO-qGNFia?dl=0). Password is the usual.
 
 - `allocation_subsamp.csv` is a csv file with a subsample of IDs. It includes the IDs of:
 	- control group (`tariff == 'E'`)
@@ -19,8 +19,8 @@ Download all the necessary files [**here**][https://www.dropbox.com/sh/j34pxsi8a
 2. Create 5 unique vectors using the data from `allocation_subsamp.csv`
 	- 1 with all the IDs of the control
 	- 4 with the IDs of each different treatment
-3. set the random seed to `1789` (doc [**here**][http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.seed.html])
-3. use the function `np.random.choice` (doc [**here**][http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.choice.html]) and extract the following sample size *without replacement*:
+3. set the random seed to `1789` (doc [**here**](http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.seed.html))
+3. use the function `np.random.choice` (doc [**here**](http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.choice.html)) and extract the following sample size *without replacement*:
 	- 300 from the control group
 	- 50 from treatment with tariff 'B'
 	- 150 from treatment with tariff 'A'
