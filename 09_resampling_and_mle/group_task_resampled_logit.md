@@ -15,8 +15,7 @@ Download all the necessary files [**here**](https://www.dropbox.com/sh/j34pxsi8a
 
 ## The Task
 
-1. Import `allocation_subsamp.csv` and `kwh_redux_pretrail.csv`
-2. Create 5 unique vectors using the data from `allocation_subsamp.csv`
+2. create 5 unique vectors using the data from `allocation_subsamp.csv`
 	- 1 with all the IDs of the control
 	- 4 with the IDs of each different treatment
 3. set the random seed to `1789` (doc [**here**](http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.seed.html))
@@ -25,11 +24,12 @@ Download all the necessary files [**here**](https://www.dropbox.com/sh/j34pxsi8a
 	- 50 from treatment with tariff 'B'
 	- 150 from treatment with tariff 'A'
 4. create a `DataFrame` with all the the sampled IDs.
-5. merge the consumption dataframe of the sampled IDs, which will strip away a large portion of the original consumption dataframe.
+1. import the consumption data from `kwh_redux_pretrail.csv`
+5. merge the consumption data with the sampled IDs, which will strip away a large portion of the original consumption dataframe.
 6. aggregate all the consumption data **by month** for each **separate group**.
 7. pivot the data from long to wide, so that `kwh` for each month is a variable.
 8. merge the wide dataset with the treatment data.
-9. compute a logit model comparing **each treatment group** to the control.
+9. compute a logit model comparing **each treatment group** to the control using only the consumption data.
 
 ## Group Assignment (may change)
 
