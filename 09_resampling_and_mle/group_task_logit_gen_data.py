@@ -24,8 +24,6 @@ paths = [os.path.join(root, v) for v in os.listdir(root) if v.startswith("File")
 ## import ONLY ids [first column] from each file
 start = time.time()
 df = pd.concat([pd.read_table(v, names = ['ID', 'date_cer', 'kw'], sep = " ") for v in paths], ignore_index = True)
-ids_rows = [pd.concat([ids[i], rows[i]], axis=1) for i in range(len(ids))]
-
 end = time.time()
 print 'total time read and stack data...', end - start, 'seconds'
 
