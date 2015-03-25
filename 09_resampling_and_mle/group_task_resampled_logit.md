@@ -11,7 +11,7 @@ Download all the necessary files [**here**](https://www.dropbox.com/sh/j34pxsi8a
 	- control group (`tariff == 'E'`)
 	- 4 treatment groups(`(tariff, stimulus) in {A, B} X {1,2}`)
 - `kwh_redux_pretrail.csv` is a csv file with all the consumption data for the subsample above, including the time correction.
-- `Smart meters Residential pre-trial survey data.csv` is a csv of the pretrial survey. The incredibly long and hideous codebook is available [**here**][https://www.dropbox.com/s/t7f3f1kzv0em34b/RESIDENTIAL%20PRE%20TRIAL%20SURVEY.doc?dl=0].
+- `Smart meters Residential pre-trial survey data.csv` is a csv of the pretrial survey. The incredibly long and hideous codebook is available [**here**](https://www.dropbox.com/s/t7f3f1kzv0em34b/RESIDENTIAL%20PRE%20TRIAL%20SURVEY.doc?dl=0).
 
 ## The Task
 
