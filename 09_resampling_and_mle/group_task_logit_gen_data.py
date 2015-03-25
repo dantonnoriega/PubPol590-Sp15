@@ -89,5 +89,5 @@ df_redux_pretrial = df_redux_pretrial[['ID', 'kwh', 'date', 'hour', 'minute']]
 # EXPORT DATA ---------------------
 df_TC.to_csv(main_dir + 'data_sets/CER/tasks/id_subsamp.csv', index=False)
 # df_redux.to_csv(main_dir + 'data_sets/CER/tasks/kwh_redux.csv', index=False)
-df_redux_pretrial.to_csv(main_dir + 'data_sets/CER/tasks/kwh_redux_pretrail.csv', index=False)
+df_redux_pretrial.to_csv(main_dir + 'data_sets/CER/tasks/kwh_pre_trial.csv', index=False)
 

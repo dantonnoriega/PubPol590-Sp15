@@ -9,7 +9,7 @@ Download all the necessary files [**here**](https://www.dropbox.com/sh/j34pxsi8a
 
 - `allocation_subsamp.csv` is a csv file with a subsample of IDs. It includes the IDs of:
 	- control group (`tariff == 'E'`)
-	- 4 treatment groups(`(tariff, stimulus) in {A, B} X {1,2}`)
+	- 4 treatment groups(`(tariff, stimulus) in {A, B} X {1,3}`)
 - `kwh_redux_pretrail.csv` is a csv file with all the consumption data for the subsample above, including the time correction.
 - `Smart meters Residential pre-trial survey data.csv` is a csv of the pretrial survey. The incredibly long and hideous codebook is available [**here**](https://www.dropbox.com/s/t7f3f1kzv0em34b/RESIDENTIAL%20PRE%20TRIAL%20SURVEY.doc?dl=0).
 
@@ -35,4 +35,7 @@ Download all the necessary files [**here**](https://www.dropbox.com/sh/j34pxsi8a
 
 Read `RESIDENTIAL PRE TRIAL SURVEY.doc`. Identify a few variables you think may be systematically different. Write up why you selected them.
 
-`Smart meters Residential pre-trial survey data.csv`
+Next, import `Smart meters Residential pre-trial survey data.csv`. Extract the variables you're interested in.
+
+Merge them to the wide data from before
+I'll release some hints soon.
