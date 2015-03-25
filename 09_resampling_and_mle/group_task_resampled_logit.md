@@ -21,8 +21,8 @@ Download all the necessary files [**here**](https://www.dropbox.com/sh/j34pxsi8a
 3. set the random seed to `1789` (doc [**here**](http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.seed.html))
 3. use the function `np.random.choice` (doc [**here**](http://docs.scipy.org/doc/numpy/reference/generated/numpy.random.choice.html)) and extract the following sample size *without replacement*:
 	- 300 from the control group
-	- 50 from treatment with tariff 'B'
-	- 150 from treatment with tariff 'A'
+	- 50 each from treatment (B, 1) and (B, 3)
+	- 150 each from treatment (A, 1) and (A, 3)
 4. create a `DataFrame` with all the the sampled IDs.
 1. import the consumption data from `kwh_redux_pretrail.csv`
 5. merge the consumption data with the sampled IDs, which will strip away a large portion of the original consumption dataframe.
