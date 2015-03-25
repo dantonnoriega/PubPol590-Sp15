@@ -48,7 +48,7 @@ print 'total time to merge assignment...', end - start, 'seconds'
 start = time.time()
 df['hour_cer'] = df['date_cer'] % 100
 df['day_cer'] = (df['date_cer'] - df['hour_cer']) / 100
-df.sort(['date_cer', 'ID'], inplace = True)
+# df.sort(['date_cer', 'ID'], inplace = True)
 df.reset_index(inplace=True)
 end = time.time()
 print 'total time create new variables...', end - start, 'seconds'
