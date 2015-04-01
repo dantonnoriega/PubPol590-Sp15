@@ -135,16 +135,16 @@ Further information is available at the [**following link**](http://www.ucd.ie/i
 |Date | Topics and Deadlines|
 |:----|:----------------------|
 | 3/18 | Classification/Logit |
-		| *FR*: *ISLR* 4.1, 4.2, 4.3.1 - 4.3.3 |
+|		| *FR*: *ISLR* 4.1, 4.2, 4.3.1 - 4.3.3 |
 | 3/25 | MLE/Logit; Group Task 3: Logit with Resampled Data|
-		| *FR*: *ISLR* 4.1, 4.2, 4.3.1 - 4.3.3 |
+|		| *FR*: *ISLR* 4.1, 4.2, 4.3.1 - 4.3.3 |
 | 4/1  | Similarity/Neighbors; Group Task 3 Help/Hints |
-		|*FR*: "K-nearest neighbor (KNN)" *ISLR* 2.2.3; "Clustering Methods" *ISLR* 10.3 (Requires Reading of Prior Chapters)
+|		|*FR*: "K-nearest neighbor (KNN)" *ISLR* 2.2.3; "Clustering Methods" *ISLR* 10.3 (Requires Reading of Prior Chapters)
 | 4/8  | Propensity scores/Evaluation; Execute Propensity Score Weighting |
 | 	   | **DUE DATE -- Group Task 3: Logit with Resampled Data** |
-		| *FR*: [Rosenbaum and Rubin (1983)](http://biomet.oxfordjournals.org/content/70/1/41)
+|		| *FR*: [Harding (2013)](http://www.epri.com/abstracts/Pages/ProductAbstract.aspx?ProductId=000000003002001269); [Rosenbaum and Rubin (1983)](http://biomet.oxfordjournals.org/content/70/1/41)
 | 4/15 | *LAST LECTURE* -- Evaluation/Examples from the literature; Group Task 4: Execute Fixed Effects Model with Propensity Score Weighting |
-		| *FR*: [Rosenbaum and Rubin (1983)](http://biomet.oxfordjournals.org/content/70/1/41); [Allcott (2011)](https://files.nyu.edu/ha32/public/research/Allcott%202011%20JPubEc%20-%20Social%20Norms%20and%20Energy%20Conservation.pdf)
+|		| *FR*: [Rosenbaum and Rubin (1983)](http://biomet.oxfordjournals.org/content/70/1/41); [Allcott (2011)](https://files.nyu.edu/ha32/public/research/Allcott%202011%20JPubEc%20-%20Social%20Norms%20and%20Energy%20Conservation.pdf)
 | 4/22 | **DUE DATE -- Group Task 4: Propensity Score Weighting And Fixed Effects Models** | 
 | 4/30  | **INDIVIDUAL FINAL DUE ON (*OR BEFORE*) 4/30 @ 11:59 PM** |
 

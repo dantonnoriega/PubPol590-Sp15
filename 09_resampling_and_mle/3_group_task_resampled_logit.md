@@ -61,15 +61,15 @@ The task starts in class. Teams must finish *both sections* by the due date.
 
 To receive credit, you must push a *folder* with your python code to your team repo. *Please CLEARLY identify which folder and files are to be graded!*
 
-Criteria | 10 pts  	
---------------------------------|------
-Easy to read code 				|	**1**  
-Runs Out-of-the-Box				|	**2**
-**Section 1**                      |  
-		 -- Proper Random Sampling Order		| 	**1**
-		 -- Correct Logit Results		| 	**2**
-**Section 2**                      |  
-		 -- Correctly manage the "Dummy Variable Trap"		| 	**1**
-		 -- Well reasoned, concise responses to 3 prompts		| 	**3**
+|Criteria 								| 	10 pts  	|
+|---------------------------------------|---------------|
+|Easy to read code 						|	**1**  		|
+|Runs Out-of-the-Box					|	**2**		|
+|**Section 1**                      	|  				|
+|		 -- Proper Random Sampling Order| 	**1**		|
+|		 -- Correct Logit Results		| 	**2**		|
+|**Section 2**                      	|  					|
+|		 -- Correctly manage the "Dummy Variable Trap"		| 	**1**|
+|		 -- Well reasoned, concise responses to 3 prompts		| 	**3**|
 
 Long, incoherent responses will be *penalized*.
