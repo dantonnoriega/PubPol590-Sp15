@@ -124,27 +124,29 @@ Further information is available at the [**following link**](http://www.ucd.ie/i
     -  Selection: matching and instrumental variables
 8.  Customer segmentation and classification
 	- Logit
-	- Overfitting and Resampling
 	- Similarity and Nearest Neighbor
 9.  Implications of data analytics for program design and program evaluation in data-rich environments
 	- Propensity score matching 
 10. Translating data science into actionable policy
-7.  Data reduction
-6.  Predictive analytics
-    -  Time series techniques
-    -  Forecasting
    
-   
-## Anticipated Schedule and Due Dates
+## Schedule and Due Dates
+
 
 |Date | Topics and Deadlines|
 |:----|:----------------------|
-Mar 18 | Classification/Logit
-Mar 25 | Overfitting/Resampling; Execute classification task
-Apr 1  | Similarity/Neighbors
-Apr 8  | Propensity scores/Evaluation; Execute matching task
-	   | **DUE DATE -- ASSN 3: Regression And Classification Assignment**
-Apr 15 | Dimension reduction/PCA/Random Matrix Theory
-Apr 22 | Prediction; Execute PCA+Heterogeneous Treatment Effects
-	   | **DUE DATE -- ASSN 4: Evaluation Assignment**
-Apr 30  | **INDIVIDUAL FINAL DUE @ 11:59 PM**
+| 3/18 | Classification/Logit |
+		| *FR*: *ISLR* 4.1, 4.2, 4.3.1 - 4.3.3 |
+| 3/25 | MLE/Logit; Group Task 3: Logit with Resampled Data|
+		| *FR*: *ISLR* 4.1, 4.2, 4.3.1 - 4.3.3 |
+| 4/1  | Similarity/Neighbors; Group Task 3 Help/Hints |
+		|*FR*: "K-nearest neighbor (KNN)" *ISLR* 2.2.3; "Clustering Methods" *ISLR* 10.3 (Requires Reading of Prior Chapters)
+| 4/8  | Propensity scores/Evaluation; Execute Propensity Score Weighting |
+| 	   | **DUE DATE -- Group Task 3: Logit with Resampled Data** |
+		| *FR*: [Rosenbaum and Rubin (1983)](http://biomet.oxfordjournals.org/content/70/1/41)
+| 4/15 | *LAST LECTURE* -- Evaluation/Examples from the literature; Group Task 4: Execute Fixed Effects Model with Propensity Score Weighting |
+		| *FR*: [Rosenbaum and Rubin (1983)](http://biomet.oxfordjournals.org/content/70/1/41); [Allcott (2011)](https://files.nyu.edu/ha32/public/research/Allcott%202011%20JPubEc%20-%20Social%20Norms%20and%20Energy%20Conservation.pdf)
+| 4/22 | **DUE DATE -- Group Task 4: Propensity Score Weighting And Fixed Effects Models** | 
+| 4/30  | **INDIVIDUAL FINAL DUE ON (*OR BEFORE*) 4/30 @ 11:59 PM** |
+
+*FR* = 'Further Reading'
+*ISLR* = 'Introduction to Statistical Learning'
