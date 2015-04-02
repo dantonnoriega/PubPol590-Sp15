@@ -18,6 +18,7 @@ Download all the necessary files [**here**](https://www.dropbox.com/sh/j34pxsi8a
 	- 4 treatment groups(`(tariff, stimulus) in {A, B} X {1,3}`)
 - `kwh_redux_pretrial.csv` is a csv file with all the consumption data for the subsample above, including the time correction.
 - `Smart meters Residential pre-trial survey data.csv` is a csv of the pretrial survey. The incredibly long and hideous codebook is available [**here**](https://www.dropbox.com/s/t7f3f1kzv0em34b/RESIDENTIAL%20PRE%20TRIAL%20SURVEY.doc?dl=0).
+- `data_section2.csv` is a finished wide data set required for generate results in Section II.
 
 ---
 
@@ -49,11 +50,10 @@ The task starts in class. Teams must finish *both sections* by the due date.
 
 ### Section II: Logit with Survey Data
 
+2. Download the [following code](https://github.com/ultinomics/Duke_PUBPOL590/blob/master/09_resampling_and_mle/task_3_hints/09_group_task_3_section_2.py) 2. Watch the [tutorial video](https://www.dropbox.com/sh/ccrvzpz5ynym5gn/AACV-MjrL9X01TSBkfLl3CQLa?dl=0) on how to use the code.
 1. Review how the survey questions were coded by reading `RESIDENTIAL PRE TRIAL SURVEY.doc`.
-2. Select *any* **4 Questions** BESIDES `Question 200` (gender) to use in the logit models.
-2. Import `Smart meters Residential pre-trial survey data.csv` and extract only the variables associated with the questions you selected plus the `Question 200` variables.
-3. Merge the extracted variables to your wide data frame. (Beware the "dummy variable trap" -- I will offer hints in-class, April 1st.)
-4. Compute a logit model comparing **each treatment group** to the control using consumption data AND the question variables.
+2. Select any **4 Questions** BESIDES `Question 200` (gender) to use in the logit models. *NOTE: Rows with ANY missing data will be removed automatically.* Preference more complete questions as it will keep more IDs.
+4. Compute a logit model comparing **each treatment group** to the control using consumption data AND the question dummy variables. Do this using function `do_logit`.
 5. **In a separate document** (MS Word, .docx, is ok; markdown, .md, is preferred), **please do the following**: 
 	5. Briefly explain the results of each different logit regression. Highlight any significant differences between the models and if there is any evidence of imbalance. Please be concise.
 	6. Briefly explain the benefit(s) and potential problem(s) of using ALL the available survey variables in a logit regression. Please be concise.
@@ -68,10 +68,9 @@ To receive credit, you must push a *folder* with your python code to your team r
 |Easy to read code 						|	**1**  		|
 |Runs Out-of-the-Box					|	**2**		|
 |**Section 1**                      	|  				|
-|		 -- Proper Random Sampling Order| 	**1**		|
+|		 -- Proper Random Sampling Order| 	**2**		|
 |		 -- Correct Logit Results		| 	**2**		|
 |**Section 2**                      	|  					|
-|		 -- Correctly manage the "Dummy Variable Trap"		| 	**1**|
 |		 -- Well reasoned, concise responses to 3 prompts		| 	**3**|
 
 Long, incoherent responses will be *penalized*.
