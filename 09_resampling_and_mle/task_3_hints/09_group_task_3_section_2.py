@@ -109,7 +109,7 @@ def do_logit(DF, tar, stim, D = None):
 
     ## RUN LOGIT
     logit_model = sm.Logit(y, X) # linearly prob model
-    logit_results = logit_model.fit(maxiter=10000, method='nm') # get the fitted values
+    logit_results = logit_model.fit(maxiter=50000, method='nm') # get the fitted values
     print msg, logit_results.summary() # print pretty results (no results given lack of obs)
 
 
@@ -128,7 +128,7 @@ df = pd.read_csv(root + 'data_section2.csv')
 qs = ques_list(srvy)
 
 # get dummies
-dummies = dvt(srvy, [200, 410, 404, 4332.4])
+dummies = dvt(srvy, [200, 310, 404])
 
 # run logit, optional dummies
 do_logit(df, 'A', '3', D = dummies)
