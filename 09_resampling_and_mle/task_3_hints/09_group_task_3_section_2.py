@@ -6,23 +6,9 @@ import numpy as np
 import statsmodels.api as sm
 
 # DEFINE FUNCTIONS -----------------
-# df = dataframe of survey, sel = list of question numbers you want to extract free of DVT
-def dvt(srvy, sel):
-
-    class bcolors:
-        HEADER = '\033[95m'
-        OKBLUE = '\033[94m'
-        OKGREEN = '\033[92m'
-        WARNING = '\033[93m'
-        FAIL = '\033[91m'
-        ENDC = '\033[0m'
-        BOLD = '\033[1m'
-        UNDERLINE = '\033[4m'
-
-    """Function to select questions then remove extra dummy column (avoids dummy variable trap DVT)"""
+def ques_list(srvy):
 
     DF = srvy.copy()
-    sel = [str(v) for v in sel]
     import re
     q = re.compile('Question ([0-9]+):.*')
     cols = [unicode(v, errors ='ignore') for v in DF.columns.values]
@@ -39,11 +25,33 @@ def dvt(srvy, sel):
     df_qs['subq'] = df_qs['subq'].apply(str)
     df_qs.ix[df_qs.n == 1, ['subq']] = '' # make empty string
     df_qs['Ques'] = df_qs['q']
-    df_qs.ix[df_qs.n != 1, ['Ques']] = df_qs['Ques'] + ',' + df_qs['subq']
+    df_qs.ix[df_qs.n != 1, ['Ques']] = df_qs['Ques'] + '.' + df_qs['subq']
 
-    # # convert strings to integers
-    # for i in df_qs:
-    #     df_qs[i] = df_qs[i].apply(int)
+    DF.columns = ['ID'] + df_qs.Ques.values.tolist()
+
+    Qs = DataFrame(zip(nms, DF.columns), columns = [ "recoded", "desc"])[1:]
+
+    return Qs, df_qs, DF
+
+# df = dataframe of survey, sel = list of question numbers you want to extract free of DVT
+def dvt(srvy, sel):
+
+    class bcolors:
+        HEADER = '\033[95m'
+        OKBLUE = '\033[94m'
+        OKGREEN = '\033[92m'
+        WARNING = '\033[93m'
+        FAIL = '\033[91m'
+        ENDC = '\033[0m'
+        BOLD = '\033[1m'
+        UNDERLINE = '\033[4m'
+
+    """Function to select questions then remove extra dummy column (avoids dummy variable trap DVT)"""
+
+    Qs, df_qs, DF = ques_list(srvy)
+
+    sel = [str(v) for v in sel]
+    nms = DF.columns
 
     # extract selected columns
     indx = []
@@ -54,10 +62,6 @@ def dvt(srvy, sel):
             "\n\nERROR: Question %s not found. Please check CER documentation"
             " and choose a different question.\n" + bcolors.ENDC) % v
          indx =  indx + [i for sublist in l for i in sublist]
-
-    DF.columns = ['ID'] + df_qs.Ques.values.tolist()
-
-    nms = DF.columns
 
     # Exclude NAs Rows
     DF = DF.dropna(axis=0, how='any', subset=[nms[indx]])
@@ -116,7 +120,12 @@ nas = ['', ' ', 'NA'] # set NA values so that we dont end up with numbers and te
 srvy = pd.read_csv(root + 'Smart meters Residential pre-trial survey data.csv', na_values = nas)
 df = pd.read_csv(root + 'data_section2.csv')
 
+# list of questions
+qs = ques_list(srvy)
+
+# get dummies
 dummies = dvt(srvy, [200, 410, 404])
 
+# run logit, optional dummies
 do_logit(df, 'A', '3', D = dummies)
 
