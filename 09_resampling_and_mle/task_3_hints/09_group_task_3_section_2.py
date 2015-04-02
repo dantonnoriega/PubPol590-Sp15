@@ -6,7 +6,7 @@ import numpy as np
 import statsmodels.api as sm
 
 # DEFINE FUNCTIONS -----------------
-def ques_list(srvy):
+def ques_recode(srvy):
 
     DF = srvy.copy()
     import re
@@ -29,9 +29,13 @@ def ques_list(srvy):
 
     DF.columns = ['ID'] + df_qs.Ques.values.tolist()
 
-    Qs = DataFrame(zip(nms, DF.columns), columns = [ "recoded", "desc"])[1:]
+    return df_qs, DF
 
-    return Qs, df_qs, DF
+def ques_list(srvy):
+
+    df_qs, DF = ques_recode(srvy)
+    Qs = DataFrame(zip(DF.columns, srvy.columns), columns = [ "recoded", "desc"])[1:]
+    return Qs
 
 # df = dataframe of survey, sel = list of question numbers you want to extract free of DVT
 def dvt(srvy, sel):
@@ -48,7 +52,7 @@ def dvt(srvy, sel):
 
     """Function to select questions then remove extra dummy column (avoids dummy variable trap DVT)"""
 
-    Qs, df_qs, DF = ques_list(srvy)
+    df_qs, DF = ques_recode(srvy)
 
     sel = [str(v) for v in sel]
     nms = DF.columns
@@ -56,7 +60,7 @@ def dvt(srvy, sel):
     # extract selected columns
     indx = []
     for v in sel:
-         l = df_qs.ix[df_qs['q'] == v, ['index']].values.tolist()
+         l = df_qs.ix[df_qs['Ques'] == v, ['index']].values.tolist()
          if(len(l) == 0):
             print (bcolors.FAIL + bcolors.UNDERLINE +
             "\n\nERROR: Question %s not found. Please check CER documentation"
@@ -124,7 +128,7 @@ df = pd.read_csv(root + 'data_section2.csv')
 qs = ques_list(srvy)
 
 # get dummies
-dummies = dvt(srvy, [200, 410, 404])
+dummies = dvt(srvy, [200, 410, 404, 4332.4])
 
 # run logit, optional dummies
 do_logit(df, 'A', '3', D = dummies)
