@@ -27,6 +27,8 @@ The task starts in class. Teams must finish *both sections* by the due date.
 
 ### Section I: Resampled Logit, Consumption Only (started in-class March 25)
 
+**HINTS AVAILABLE [HERE](https://www.dropbox.com/sh/ccrvzpz5ynym5gn/AACV-MjrL9X01TSBkfLl3CQLa?dl=0)!** Video is `14_group_task_3_hints_sect1`
+
 2. create 5 unique vectors using the data from `allocation_subsamp.csv`
 	- 1 with all the IDs of the control
 	- 4 with the IDs of each different treatment
