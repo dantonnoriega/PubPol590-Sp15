@@ -50,7 +50,8 @@ The task starts in class. Teams must finish *both sections* by the due date.
 
 ### Section II: Logit with Survey Data
 
-2. Download the [following code](https://github.com/ultinomics/Duke_PUBPOL590/blob/master/09_resampling_and_mle/task_3_hints/09_group_task_3_section_2.py) 2. Watch the [tutorial video](https://www.dropbox.com/sh/ccrvzpz5ynym5gn/AACV-MjrL9X01TSBkfLl3CQLa?dl=0) on how to use the code.
+2. Download the [following code](https://github.com/ultinomics/Duke_PUBPOL590/blob/master/09_resampling_and_mle/task_3_hints/09_group_task_3_section_2.py)
+3. Watch the [tutorial video](https://www.dropbox.com/sh/ccrvzpz5ynym5gn/AACV-MjrL9X01TSBkfLl3CQLa?dl=0) on how to use the code.
 1. Review how the survey questions were coded by reading `RESIDENTIAL PRE TRIAL SURVEY.doc`.
 2. Select any **4 Questions** BESIDES `Question 200` (gender) to use in the logit models. *NOTE: Rows with ANY missing data will be removed automatically.* Preference more complete questions as it will keep more IDs.
 4. Compute a logit model comparing **each treatment group** to the control using consumption data AND the question dummy variables. Do this using function `do_logit`.
