@@ -53,10 +53,10 @@ The task starts in class. Teams must finish *both sections* by the due date.
 3. Watch the [tutorial video](https://www.dropbox.com/sh/ccrvzpz5ynym5gn/AACV-MjrL9X01TSBkfLl3CQLa?dl=0) on how to use the code.
 2. Download the [following code](https://github.com/ultinomics/Duke_PUBPOL590/blob/master/09_resampling_and_mle/task_3_hints/09_group_task_3_section_2.py).
 1. Review how the survey questions were coded by reading `RESIDENTIAL PRE TRIAL SURVEY.doc`.
-2. Select any **4 Questions** BESIDES `Question 200` (gender) to use in the logit models. *NOTE: Rows with ANY missing data will be removed automatically.* Preference more complete questions as it will keep more IDs.
-4. Compute a logit model comparing **each treatment group** to the control using consumption data AND the question dummy variables. Do this using function `do_logit`.
+2. Select **2 QUALITATIVE Questions** (i.e. categorical variables) BESIDES `Question 200` (gender) to use in the logit models. *NOTE: Rows with ANY missing data will be removed automatically.* Preference more complete questions as it will keep more IDs.
+4. Compute a logit model comparing **each treatment group** to the control using consumption data AND the question dummy variables. Do this using function `do_logit`. *Try to choose question where the logit function **converges***.
 5. **In a separate document** (MS Word, .docx, is ok; markdown, .md, is preferred), **please do the following**: 
-	5. Briefly explain the results of each different logit regression. Highlight any significant differences between the models and if there is any evidence of imbalance. Please be concise.
+	5. Briefly explain the results of each different logit regression with the 3 variables you selected (which converge). Highlight any significant differences between the models and if there is any evidence of imbalance. Please be concise.
 	6. Briefly explain the benefit(s) and potential problem(s) of using ALL the available survey variables in a logit regression. Please be concise.
 	7. Briefly explain when and why (if at all) it would be sufficient to use only a subset of the available survey questions. Please be concise.
 
