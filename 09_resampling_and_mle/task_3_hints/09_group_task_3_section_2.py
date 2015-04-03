@@ -5,6 +5,16 @@ import pandas as pd
 import numpy as np
 import statsmodels.api as sm
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
 # DEFINE FUNCTIONS -----------------
 def ques_recode(srvy):
 
@@ -40,16 +50,6 @@ def ques_list(srvy):
 # df = dataframe of survey, sel = list of question numbers you want to extract free of DVT
 def dvt(srvy, sel):
 
-    class bcolors:
-        HEADER = '\033[95m'
-        OKBLUE = '\033[94m'
-        OKGREEN = '\033[92m'
-        WARNING = '\033[93m'
-        FAIL = '\033[91m'
-        ENDC = '\033[0m'
-        BOLD = '\033[1m'
-        UNDERLINE = '\033[4m'
-
     """Function to select questions then remove extra dummy column (avoids dummy variable trap DVT)"""
 
     df_qs, DF = ques_recode(srvy)
@@ -79,11 +79,70 @@ def dvt(srvy, sel):
         dum = pd.concat([dum, temp], axis = 1)
         # print dum
 
+        # test for multicollineary
+
     return dum
 
-def do_logit(df, tar, stim, D = None):
-    DF = df.copy()
+def rm_perf_sep(y, X):
 
+    dep = y.copy()
+    indep = X.copy()
+    yx = pd.concat([dep, indep], axis = 1)
+    grp = yx.groupby(dep)
+
+    nm_y = dep.name
+    nm_dum = np.array([v for v in indep.columns if v.startswith('D_')])
+
+    DFs = [yx.ix[v,:] for k, v in grp.groups.iteritems()]
+    perf_sep0 = np.ndarray((2, indep[nm_dum].shape[1]),
+        buffer = np.array([np.linalg.norm(DF[nm_y].values.astype(bool) - v.values) for DF in DFs for k, v in DF[nm_dum].iteritems()]))
+    perf_sep1 = np.ndarray((2, indep[nm_dum].shape[1]),
+        buffer = np.array([np.linalg.norm(~DF[nm_y].values.astype(bool) - v.values) for DF in DFs for k, v in DF[nm_dum].iteritems()]))
+
+    check = np.vstack([perf_sep0, perf_sep1])==0.
+    indx = np.where(check)[1] if np.any(check) else np.array([])
+
+    if indx.size > 0:
+        keep = np.all(np.array([indep.columns.values != i for i in nm_dum[indx]]), axis=0)
+        nms = [i.encode('utf-8') for i in nm_dum[indx]]
+        print (bcolors.FAIL + bcolors.UNDERLINE +
+        "\nPerfect Separation produced by %s. Removed.\n" + bcolors.ENDC) % nms
+
+        # return matrix with perfect predictor colums removed and obs where true
+        indep1 = indep[np.all(indep[nm_dum[indx]]!=1, axis=1)].ix[:, keep]
+        dep1 = dep[np.all(indep[nm_dum[indx]]!=1, axis=1)]
+        return dep1, indep1
+    else:
+        return dep, indep
+
+
+def rm_vif(X):
+
+    import statsmodels.stats.outliers_influence as smso
+    loop=True
+    indep = X.copy()
+    # print indep.shape
+    while loop:
+        vifs = np.array([smso.variance_inflation_factor(indep.values, i) for i in xrange(indep.shape[1])])
+        max_vif = vifs[1:].max()
+        # print max_vif, vifs.mean()
+        if max_vif > 30 and vifs.mean() > 10:
+            where_vif = vifs[1:].argmax() + 1
+            keep = np.arange(indep.shape[1]) != where_vif
+            nms = indep.columns.values[where_vif].encode('utf-8') # only ever length 1, so convert unicode
+            print (bcolors.FAIL + bcolors.UNDERLINE +
+            "\n%s removed due to multicollinearity.\n" + bcolors.ENDC) % nms
+            indep = indep.ix[:, keep]
+        else:
+            loop=False
+    # print indep.shape
+
+    return indep
+
+
+def do_logit(df, tar, stim, D = None):
+
+    DF = df.copy()
     if D is not None:
         DF = pd.merge(DF, D, on = 'ID')
         kwh_cols = [v for v in DF.columns.values if v.startswith('kwh')]
@@ -103,16 +162,25 @@ def do_logit(df, tar, stim, D = None):
     y = df1['T']
     X = df1[cols] # extend list of kwh names
     X = sm.add_constant(X)
-    # print y, X
 
-    msg = ("\n\n\n\n-----------------------------------------------------------------\n"
+    msg = ("\n\n\n\n\n-----------------------------------------------------------------\n"
     "LOGIT where Treatment is Tariff = %s, Stimulus = %s"
-    "\n-----------------------------------------------------------------\n\n\n") % (tar, stim)
+    "\n-----------------------------------------------------------------\n") % (tar, stim)
+    print msg
+
+    print (bcolors.FAIL +
+        "\n\n-----------------------------------------------------------------" + bcolors.ENDC)
+
+    y, X = rm_perf_sep(y, X) # remove perfect predictors
+    X = rm_vif(X) # remove multicollinear vars
+
+    print (bcolors.FAIL +
+        "-----------------------------------------------------------------\n\n\n" + bcolors.ENDC)
 
     ## RUN LOGIT
     logit_model = sm.Logit(y, X) # linearly prob model
     logit_results = logit_model.fit(maxiter=10000, method='newton') # get the fitted values
-    print msg, logit_results.summary() # print pretty results (no results given lack of obs)
+    print logit_results.summary() # print pretty results (no results given lack of obs)
 
 
 #####################################################################
@@ -130,8 +198,16 @@ df = pd.read_csv(root + 'data_section2.csv')
 qs = ques_list(srvy)
 
 # get dummies
-dummies = dvt(srvy, [200, 401])
+sel = [200, 300, 310, 405, 401]
+dummies = dvt(srvy, sel)
 
 # run logit, optional dummies
-do_logit(df, 'A', '1', D = dummies)
+tariffs = [v for v in pd.unique(df['tariff']) if v != 'E']
+stimuli = [v for v in pd.unique(df['stimulus']) if v != 'E']
+tariffs.sort() # make sure the order correct with .sort()
+stimuli.sort()
+
+for i in tariffs:
+    for j in stimuli:
+        do_logit(df, i, j, D = dummies)
 
