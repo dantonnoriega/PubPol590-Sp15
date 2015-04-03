@@ -81,7 +81,9 @@ def dvt(srvy, sel):
 
     return dum
 
-def do_logit(DF, tar, stim, D = None):
+def do_logit(df, tar, stim, D = None):
+    DF = df.copy()
+
     if D is not None:
         DF = pd.merge(DF, D, on = 'ID')
         kwh_cols = [v for v in DF.columns.values if v.startswith('kwh')]
@@ -91,7 +93,7 @@ def do_logit(DF, tar, stim, D = None):
         kwh_cols = [v for v in DF.columns.values if v.startswith('kwh')]
         cols = kwh_cols
 
-
+    DF.to_csv("/Users/dnoriega/Desktop/" + "test.csv", index = False)
     # set up y and X
     indx = (DF.tariff == 'E') | ((DF.tariff == tar) & (DF.stimulus == stim))
     df1 = DF.ix[indx, :].copy() # `:` denotes ALL columns; use copy to create a NEW frame
@@ -101,7 +103,7 @@ def do_logit(DF, tar, stim, D = None):
     y = df1['T']
     X = df1[cols] # extend list of kwh names
     X = sm.add_constant(X)
-    # print y, X
+    print y, X
 
     msg = ("\n\n\n\n-----------------------------------------------------------------\n"
     "LOGIT where Treatment is Tariff = %s, Stimulus = %s"
@@ -109,7 +111,7 @@ def do_logit(DF, tar, stim, D = None):
 
     ## RUN LOGIT
     logit_model = sm.Logit(y, X) # linearly prob model
-    logit_results = logit_model.fit(maxiter=50000, method='nm') # get the fitted values
+    logit_results = logit_model.fit(start_params = strt_prms, maxiter=50000, method='newton') # get the fitted values
     print msg, logit_results.summary() # print pretty results (no results given lack of obs)
 
 
@@ -128,8 +130,8 @@ df = pd.read_csv(root + 'data_section2.csv')
 qs = ques_list(srvy)
 
 # get dummies
-dummies = dvt(srvy, [200, 310, 404])
+dummies = dvt(srvy, [200, 401])
 
 # run logit, optional dummies
-do_logit(df, 'A', '3', D = dummies)
+do_logit(df, 'A', '1', D = dummies)
 
