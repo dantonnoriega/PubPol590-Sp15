@@ -111,7 +111,7 @@ def do_logit(df, tar, stim, D = None):
 
     ## RUN LOGIT
     logit_model = sm.Logit(y, X) # linearly prob model
-    logit_results = logit_model.fit(start_params = strt_prms, maxiter=50000, method='newton') # get the fitted values
+    logit_results = logit_model.fit(maxiter=10000, method='newton') # get the fitted values
     print msg, logit_results.summary() # print pretty results (no results given lack of obs)
 
 
