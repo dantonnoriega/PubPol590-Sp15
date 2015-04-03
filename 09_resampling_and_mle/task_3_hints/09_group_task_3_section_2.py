@@ -152,7 +152,7 @@ def do_logit(df, tar, stim, D = None):
         kwh_cols = [v for v in DF.columns.values if v.startswith('kwh')]
         cols = kwh_cols
 
-    DF.to_csv("/Users/dnoriega/Desktop/" + "test.csv", index = False)
+    # DF.to_csv("/Users/dnoriega/Desktop/" + "test.csv", index = False)
     # set up y and X
     indx = (DF.tariff == 'E') | ((DF.tariff == tar) & (DF.stimulus == stim))
     df1 = DF.ix[indx, :].copy() # `:` denotes ALL columns; use copy to create a NEW frame
