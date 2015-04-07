@@ -1,5 +1,7 @@
 # Python Topics Covered
 
+*Students will not be expect to learn anything more advance than what is listed above. Codes for more complicated operations, like what is require to do Fixed Effects models (covered at the end of class), will be provided.*
+
 ### Outline
 
 1. Intro to Pandas
@@ -74,5 +76,3 @@
 	- `sm.OLS` and `sm.Logit` model-objects
 	- `.fit()` method for model-objects to generate estimates
 	- `.summary()` of fitted model to get results
-
-Students will not be expect to learn anything more advance than what is listed above. Codes for more complicated operations, like what is require to do Fixed Effects models, will be provided by the instructors.
