@@ -94,6 +94,8 @@ def rm_perf_sep(y, X):
     nm_dum = np.array([v for v in indep.columns if v.startswith('D_')])
 
     DFs = [yx.ix[v,:] for k, v in grp.groups.iteritems()]
+    kind = np.array([i for i, v in grp.groups.iteritems()]*2)
+
     perf_sep0 = np.ndarray((2, indep[nm_dum].shape[1]),
         buffer = np.array([np.linalg.norm(DF[nm_y].values.astype(bool) - v.values) for DF in DFs for k, v in DF[nm_dum].iteritems()]))
     perf_sep1 = np.ndarray((2, indep[nm_dum].shape[1]),
@@ -101,12 +103,16 @@ def rm_perf_sep(y, X):
 
     check = np.vstack([perf_sep0, perf_sep1])==0.
     indx = np.where(check)[1] if np.any(check) else np.array([])
+    if indx.size > 1:
+        kind = ['failure' if i == 0 else 'success' for i in kind[np.where(check)[0]]]
+    else:
+        kind = 'failure' if kind[np.where(check)[0]] == 0 else 'success'
 
     if indx.size > 0:
         keep = np.all(np.array([indep.columns.values != i for i in nm_dum[indx]]), axis=0)
         nms = [i.encode('utf-8') for i in nm_dum[indx]]
         print (bcolors.FAIL + bcolors.UNDERLINE +
-        "\nPerfect Separation produced by %s. Removed.\n" + bcolors.ENDC) % nms
+        "\n%s perfectly predict %s.\nVariables and observations removed.\n" + bcolors.ENDC) % (nms, kind)
 
         # return matrix with perfect predictor colums removed and obs where true
         indep1 = indep[np.all(indep[nm_dum[indx]]!=1, axis=1)].ix[:, keep]

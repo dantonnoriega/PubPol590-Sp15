@@ -70,7 +70,7 @@ To receive credit, you must push a *folder* with your python code to your team r
 |Runs Out-of-the-Box					|	**2**		|
 |**Section 1**                      	|  				|
 |		 -- Proper Random Sampling Order| 	**2**		|
-|		 -- Correct Logit Results		| 	**2**		|
+|		 -- Correct Logit Results (depends on sampling order)		| 	**2**		|
 |**Section 2**                      	|  					|
 |		 -- Well reasoned, concise responses to 3 prompts		| 	**3**|
 

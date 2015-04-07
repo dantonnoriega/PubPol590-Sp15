@@ -23,7 +23,9 @@ Spring 2015
 **Email:** danton.noriega@duke.edu
   
 [**Course Website**](https://sakai.duke.edu)
+
 [**Course GitHub**](https://github.com/ultinomics/Duke_PUBPOL590)
+
 [**Cat Teams Spreadsheet**](https://prodduke-my.sharepoint.com/personal/drn12_duke_edu/_layouts/15/WopiFrame.aspx?sourcedoc={4a2b773f-f700-4920-82d0-ace06ceb2337}&action=view&source=https%3A%2F%2Fprodduke-my%2Esharepoint%2Ecom%2Fpersonal%2Fdrn12_duke_edu%2FDocuments%2FForms%2FAll%2Easpx)
 
 ---
