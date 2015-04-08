@@ -52,9 +52,9 @@ logit_results, df_logit = do_logit(df_pretrial, 'B', '3', add_D=None, mc=False)
 	```
 	
 2. Next, generate a column of weights called `w`. The formula for the weights is on page 4-10 from Harding (2013). Hints:
-	- generate a treatment variable. A quick way to do this is by using "boolean" vectors. Example: `df_logit['T'] = 0 + (df_logit['tariff'] == 'C')` where `T` here stands for Treatment (thi is `D` in Harding 2013).
+	- Aenerate a treatment variable. A quick way to do this is by using "boolean" vectors. Example: `df_logit['T'] = 0 + (df_logit['tariff'] == 'C')` where `T` here stands for Treatment (this is variable `D` in Harding 2013).
 	- take the square root of elements within a vector (like a pandas column) by using `np.sqrt`. Example, the square root of all kwh consumption is `np.sqrt(df_logit['kwh']`).
-	- review how the t-stats were generate "by hand" in section 0 to give you an idea of how to make a vector of weights.
+	- review how the t-stats were generate "by hand" in section 0 to give you an idea of how to make a vector of weights `w`.
 
 
 

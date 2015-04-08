@@ -1,10 +1,19 @@
-from __future__ import division
-from pandas import Series, DataFrame
-import pandas as pd
-import numpy as np
-import statsmodels.api as sm
+
+# DEFINE FUNCTIONS -----------------
+class logit_colors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
 def rm_perf_sep(y, X):
+
+    import pandas as pd
+    import numpy as np
 
     dep = y.copy()
     indep = X.copy()
@@ -32,8 +41,8 @@ def rm_perf_sep(y, X):
     if indx.size > 0:
         keep = np.all(np.array([indep.columns.values != i for i in nm_dum[indx]]), axis=0)
         nms = [i.encode('utf-8') for i in nm_dum[indx]]
-        print (bcolors.FAIL + bcolors.UNDERLINE +
-        "\n%s perfectly predict %s.\nVariables and observations removed.\n" + bcolors.ENDC) % (nms, kind)
+        print (logit_colors.FAIL + logit_colors.UNDERLINE +
+        "\n%s perfectly predict %s.\nVariables and observations removed.\n" + logit_colors.ENDC) % (nms, kind)
 
         # return matrix with perfect predictor colums removed and obs where true
         indep1 = indep[np.all(indep[nm_dum[indx]]!=1, axis=1)].ix[:, keep]
@@ -44,6 +53,8 @@ def rm_perf_sep(y, X):
 
 
 def rm_vif(X):
+
+    import numpy as np
 
     import statsmodels.stats.outliers_influence as smso
     loop=True
@@ -57,8 +68,8 @@ def rm_vif(X):
             where_vif = vifs[1:].argmax() + 1
             keep = np.arange(indep.shape[1]) != where_vif
             nms = indep.columns.values[where_vif].encode('utf-8') # only ever length 1, so convert unicode
-            print (bcolors.FAIL + bcolors.UNDERLINE +
-            "\n%s removed due to multicollinearity.\n" + bcolors.ENDC) % nms
+            print (logit_colors.FAIL + logit_colors.UNDERLINE +
+            "\n%s removed due to multicollinearity.\n" + logit_colors.ENDC) % nms
             indep = indep.ix[:, keep]
         else:
             loop=False
@@ -66,18 +77,22 @@ def rm_vif(X):
 
     return indep
 
+## returns logit_results and final DataFrame
+def do_logit(df, tar, stim, add_D=None, mc=False):
 
-def do_logit(df, tar, stim, D = None, mc = False):
+    import pandas as pd
+    import statsmodels.api as sm
 
     DF = df.copy()
-    if D is not None:
-        DF = pd.merge(DF, D, on = 'ID')
+    if add_D is not None:
+        DF = pd.merge(DF, add_D, on = 'ID')
         kwh_cols = [v for v in DF.columns.values if v.startswith('kwh')]
-        dum_cols = [v for v in D.columns.values if v.startswith('D_')]
+        dum_cols = [v for v in add_D.columns.values if v.startswith('D_')]
         cols = kwh_cols + dum_cols
     else:
         kwh_cols = [v for v in DF.columns.values if v.startswith('kwh')]
-        cols = kwh_cols
+        dum_cols = [v for v in DF.columns.values if v.startswith('D_')]
+        cols = kwh_cols + dum_cols
 
     # DF.to_csv("/Users/dnoriega/Desktop/" + "test.csv", index = False)
     # set up y and X
@@ -95,17 +110,18 @@ def do_logit(df, tar, stim, D = None, mc = False):
     "\n-----------------------------------------------------------------\n") % (tar, stim)
     print msg
 
-    print (bcolors.FAIL +
-        "\n\n-----------------------------------------------------------------" + bcolors.ENDC)
+    print (logit_colors.FAIL +
+        "\n\n-----------------------------------------------------------------" + logit_colors.ENDC)
 
     y, X = rm_perf_sep(y, X) # remove perfect predictors
     X = rm_vif(X) if mc else X # remove multicollinear vars
 
-    print (bcolors.FAIL +
-        "-----------------------------------------------------------------\n\n\n" + bcolors.ENDC)
+    print (logit_colors.FAIL +
+        "-----------------------------------------------------------------\n\n\n" + logit_colors.ENDC)
 
     ## RUN LOGIT
     logit_model = sm.Logit(y, X) # linearly prob model
     logit_results = logit_model.fit(maxiter=1000, method='newton') # get the fitted values
     print logit_results.summary() # print pretty results (no results given lack of obs)
 
+    return logit_results, DF.ix[X.index, :]
