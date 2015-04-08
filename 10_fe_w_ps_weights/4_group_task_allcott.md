@@ -26,9 +26,9 @@ This section is **UNGRADED** but one must learn this part to do the next section
 
 ## Section 1: Finding Imbalance
 
-**IMPORTANT**: I *BIASED* the data used for this section. *The results here have no bearing on the real experiment.*
+**IMPORTANT**: I intentionally *BIASED* the data used for these section. *The results here have no bearing on the real experiment.*
 
-1. Download the file `task_4_kwh_w_dummies_wide.csv` [**here**][2]. Note that there is only ONE treatment group, `C4`. Also, note that a specific subset of dummy variables was pre-selected. All of those selected are listed in `RESIDENTIAL PRE TRIAL SURVEY_EDITED.docx` [**here**][2]
+1. Download the file `task_4_kwh_w_dummies_wide.csv` [**here**][2]. Note that there is only ONE treatment group, `C4`. Also, note that a specific subset of dummy variables was pre-selected. The selected variables are listed in `RESIDENTIAL PRE TRIAL SURVEY_EDITED.docx` [**here**][2].
 2. Repeat the procedure from Section 0.
 	- Test for imbalance running Logit
 	- Test for imbalance with a "Quick Means Comparison"
