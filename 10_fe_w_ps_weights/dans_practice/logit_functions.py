@@ -77,17 +77,17 @@ def rm_vif(X):
 
     return indep
 
-
-def do_logit(df, tar, stim, D = None, mc = False):
+## returns logit_results and final DataFrame
+def do_logit(df, tar, stim, add_D=None, mc=False):
 
     import pandas as pd
     import statsmodels.api as sm
 
     DF = df.copy()
-    if D is not None:
-        DF = pd.merge(DF, D, on = 'ID')
+    if add_D is not None:
+        DF = pd.merge(DF, add_D, on = 'ID')
         kwh_cols = [v for v in DF.columns.values if v.startswith('kwh')]
-        dum_cols = [v for v in D.columns.values if v.startswith('D_')]
+        dum_cols = [v for v in add_D.columns.values if v.startswith('D_')]
         cols = kwh_cols + dum_cols
     else:
         kwh_cols = [v for v in DF.columns.values if v.startswith('kwh')]
@@ -124,3 +124,4 @@ def do_logit(df, tar, stim, D = None, mc = False):
     logit_results = logit_model.fit(maxiter=1000, method='newton') # get the fitted values
     print logit_results.summary() # print pretty results (no results given lack of obs)
 
+    return logit_results, DF.ix[X.index, :]
