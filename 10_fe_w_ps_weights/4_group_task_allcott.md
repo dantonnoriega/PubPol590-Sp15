@@ -58,7 +58,7 @@ logit_results, df_logit = do_logit(df_pretrial, 'B', '3', add_D=None, mc=False)
 
 
 
-[1]: https://github.com/ultinomics/Duke_PUBPOL590/blob/master/10_fe_w_ps_weights/do_logit.py "do_logit"
+[1]: https://github.com/ultinomics/Duke_PUBPOL590/tree/master/10_fe_w_ps_weights "do_logit"
 [2]: https://www.dropbox.com/sh/3yco7ur87mgpi3f/AACwUCRJ2_osUUClaVHK026la?dl=0 "task 4 dropbox"
 [harding]: http://www.epri.com/abstracts/Pages/ProductAbstract.aspx?ProductId=000000003002001269 "harding"
 
