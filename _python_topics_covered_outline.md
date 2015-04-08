@@ -1,6 +1,6 @@
 # Python Topics Covered
 
-*Students will not be expect to learn anything more advance than what is listed above. Codes for more complicated operations, like what is require to do Fixed Effects models (covered at the end of class), will be provided.*
+*Students will not be expect to learn anything more advance than the topics outlined. Codes for more complicated operations, like what is require to do Fixed Effects models (covered at the end of class), will be provided.*
 
 ### Outline
 
