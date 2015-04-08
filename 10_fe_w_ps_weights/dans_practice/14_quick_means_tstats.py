@@ -1,4 +1,3 @@
-
 from __future__ import division
 from pandas import Series, DataFrame
 import pandas as pd
@@ -15,13 +14,8 @@ os.chdir(git_dir + root) # change working directory (wd)
 from logit_functions import * # if `do_logit.py` is in wd, then it will import!
 
 # IMPORT DATA ------------
-nas = ['', ' ', 'NA'] # set NA values so that we dont end up with numbers and text
-df = pd.read_csv(data_dir + 'task_4_kwh_w_dummies_wide.csv', na_values = nas)
-
-
-######################################
-#       SECTION 1
-######################################
+df = pd.read_csv(data_dir + '14_B3_EE_w_dummies.csv')
+df = df.dropna(axis=0, how='any') # drop rows with missing data
 
 # GET TARIFFS --------------
 tariffs = [v for v in pd.unique(df['tariff']) if v != 'E']
@@ -41,7 +35,6 @@ df_pretrial = df.drop(drop, axis=1)
 
 for i in tariffs:
     for j in stimuli:
-        # save the results of the function!
         logit_results = do_logit(df_pretrial, i, j, add_D=None, mc = False)
 
 
@@ -52,16 +45,9 @@ df_mean = df_pretrial.groupby('tariff').mean().transpose()
 # do a t-test "by hand"
 df_s = df_pretrial.groupby('tariff').std().transpose() # the index becomes variable names
 df_n = df_pretrial.groupby('tariff').count().transpose().mean()
-tstat_top = df_mean['C'] - df_mean['E']
-tstat_bottom = np.sqrt(df_s['C']**2/df_n['C'] + df_s['E']**2/df_n['E'])
+tstat_top = df_mean['B'] - df_mean['E']
+tstat_bottom = np.sqrt(df_s['B']**2/df_n['B'] + df_s['E']**2/df_n['E'])
 tstat = tstat_top/tstat_bottom
 sig = tstat[np.abs(tstat) > 2]
 sig.name = 't-stats' # sig is a series. you can name a Series easily this way
 print "\n\n\n", sig
-
-######################################
-#       SECTION 2
-######################################
-
-
-
