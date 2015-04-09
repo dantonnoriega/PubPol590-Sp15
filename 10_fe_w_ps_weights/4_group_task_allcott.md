@@ -54,15 +54,21 @@ logit_results, df_logit = do_logit(df_pretrial, 'B', '3', add_D=None, mc=False)
 	```
 	
 2. Next, generate a column of weights called `w`. The formula for the weights is on page 4-10 from Harding (2013). Hints:
-	- Aenerate a treatment variable. A quick way to do this is by using "boolean" vectors. Example: `df_logit['T'] = 0 + (df_logit['tariff'] == 'C')` where `T` here stands for Treatment (this is variable `D` in Harding 2013).
+	- Generate a treatment variable. A quick way to do this is by using "boolean" vectors. Example: `df_logit['trt'] = 0 + (df_logit['tariff'] == 'C')` where `trt` here stands for Treatment (this is variable `D` in Harding 2013).
 	- take the square root of elements within a vector (like a pandas column) by using `np.sqrt`. Example, the square root of all kwh consumption is `np.sqrt(df_logit['kwh']`).
-	- review how the t-stats were generate "by hand" in section 0 to give you an idea of how to make a vector of weights `w`.
+	- review how the t-stats were generate "by hand" in section 0 to give you an idea of how to make a vector of weights `w` within the `df_logit` (or whatever you choose to call it) dataframe.
+3. Create a smaller dataframe with just the IDs, treatments, and weights (e.g. `df_w = df_logit[['ID', 'trt', 'w']]`).
+
+*Note:* if done correctly, this section should be very short. 
 
 
-## Section 3: Fixed Effects with Weights (INCOMPLETE)
+## Section 3: Fixed Effects with Weights
 
 3. Import the file `task_4_kwh_long.csv` from [**here**][2].
-4. Merge the dataframe with the weights (`df_logit` in the section above) to the just-imported dataframe. Some observations will be lost -- this is alright.
+4. Merge the smaller dataframe with the weights (`df_logit` in the section above) to the just-imported dataframe. Some observations will be lost -- this is alright.
+5. Create a treatment and trial interaction variable (e.g. `df['trt_trial'] = df['trt']*df['trial']`).
+5. Create a year-month variable, `ym`. All that is necessary is that `ym` be (1) a string variable and (2) uniquely distinguishes each year-month. An easy way to do this is to just convert the *year* and *month* variables into strings (e.g. `df['year'].astype(str)`) then concatenate  using `+`.
+6. Create year-month dummy variable matrix. This is labeled `mu` in Allcott (2011) --- the seasonality controls. Use the `.iloc` method to omit the first variables to avoid the *dummy variable trap* (e.g. `pd.get_dummies(df['ym'], prefix = 'ym').iloc[:, 1:]`). Note that the first part,`[:,` means "take all rows"; the second part `, 1:]` means "columns from 1 to the end". More detailed info available on indexing [**here**](http://pandas.pydata.org/pandas-docs/version/0.15.2/indexing.html).
 
 ## Grading (TDB)
 
