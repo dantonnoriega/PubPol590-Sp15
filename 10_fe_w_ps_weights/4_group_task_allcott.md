@@ -18,7 +18,7 @@ In this task, we will be implementing the fixed effects model in [Allcott (2011)
 This section is **UNGRADED** but one must learn this part to do the next section.
 
 1. Download `logit_functions.py` [**here**][1] and the practice data set `14_B3_EE_w_dummies.csv` [**here**][2]. Note that there is only ONE treatment group, `B3`.
-2. Learn how to do a "Quick Means" comparison by watching the following [**video**](vid). The video reviews:
+2. Learn how to do a "Quick Means" comparison by watching the most recent video, `16_group_task_4_section_0.mp4`, [**here**][vid]. The video reviews:
 	- how to make use of `logit_functions.py` by saving the file in the same folder as your code and then changing your working directory with `os.chdir`
 	- using the `do_logit()` function
 	- generate means for easy comparison using pandas methods `.groupby()` with `.mean()` and `.transpose()`.
@@ -59,9 +59,15 @@ logit_results, df_logit = do_logit(df_pretrial, 'B', '3', add_D=None, mc=False)
 	- review how the t-stats were generate "by hand" in section 0 to give you an idea of how to make a vector of weights `w`.
 
 
+## Section 3: Fixed Effects with Weights (INCOMPLETE)
+
+3. Import the file `task_4_kwh_long.csv` from [**here**][2].
+4. Merge the dataframe with the weights (`df_logit` in the section above) to the just-imported dataframe. Some observations will be lost -- this is alright.
+
+## Grading (TDB)
 
 [1]: https://github.com/ultinomics/Duke_PUBPOL590/tree/master/10_fe_w_ps_weights "do_logit"
 [2]: https://www.dropbox.com/sh/3yco7ur87mgpi3f/AACwUCRJ2_osUUClaVHK026la?dl=0 "task 4 dropbox"
 [harding]: http://www.epri.com/abstracts/Pages/ProductAbstract.aspx?ProductId=000000003002001269 "harding"
 
-[vid]: "quick_means"
+[vid]: https://www.dropbox.com/sh/ccrvzpz5ynym5gn/AACV-MjrL9X01TSBkfLl3CQLa?dl=0 "quick_means"
