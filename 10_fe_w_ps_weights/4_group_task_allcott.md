@@ -121,18 +121,17 @@ logit_results, df_logit = do_logit(df_pretrial, 'B', '3', add_D=None, mc=False)
 
 To receive credit, you must push a *folder* with your python code to your team repo. *Please CLEARLY identify which folder and files are to be graded!*
 
-|Criteria 								| 	15 pts  	|
+|Criteria 								| 	20 pts  	|
 |---------------------------------------|---------------|
-|Easy to read code 						|	**1**  		|
+|Easy to read code 						|	**2**  		|
 |Runs Out-of-the-Box					|	**2**		|
 |**Section 1**                      	|  				|
-|		 -- Well reasoned, concise responses to 3 prompts    | 	**3**	|
+|		 -- Well reasoned, concise responses to 3 prompts    | 	**5**	|
 |**Section 2**                      	|  					|
 |		 -- Generate correct weights		| 	**2**	|
 |**Section 3**                      	|  					|
-|		 -- Generate correct `y` and `X`		| 	**3**	|
-|		 -- Correct use of `demean` function		| 	**1**	|
-|		 -- Well reasoned, concise responses to 3 prompts	| 	**3**	|
+|		 -- Generate correct `y` and `X`		| 	**2**	|
+|		 -- Well reasoned, concise responses to 4 prompts	| 	**7**	|
 
 
 Long, incoherent responses will be *penalized*.
