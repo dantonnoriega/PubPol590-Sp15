@@ -63,7 +63,7 @@ logit_results, df_logit = do_logit(df_pretrial, 'B', '3', add_D=None, mc=False)
 	- review how the t-stats were generate "by hand" in section 0 to give you an idea of how to make a vector of weights `w` within the `df_logit` (or whatever you choose to call it) dataframe.
 3. Create a smaller dataframe with just the IDs, treatments, and weights e.g. `df_w = df_logit[['ID', 'trt', 'w']]`.
 
-*Note:* if done correctly, this section should be very short. 
+>*Note:* if done correctly, this section should be very short. 
 
 
 ## Section 3: Fixed Effects with Weights
@@ -112,10 +112,12 @@ logit_results, df_logit = do_logit(df_pretrial, 'B', '3', add_D=None, mc=False)
 	```
 
 9. **In a separate document, answer the following questions:**
+>*NOTE*: fixed effect models with de-meaned values produces incorrect standard errors. They are smaller; sometimes by a lot. This produces large smaller p-values from a standard fixed effects model using dummies. For this exercise, pretend they are **correct**, and interpret accordingly. But, in the real world, know that one must fix the standard errors before believing any p-values. Remember, p-values aren't as important as many researchers think. That said, it's important to "speak the language" of academics, so might as well practice.
 	10. Compare the coefficient estimates of the treatment-trial interaction variable. How did it change after using the weights?
 	11. Interpret the coefficient estimate for the *first* regression *without* weights. If you were consulting CER on the effectiveness of the `C4` treatment, what would you conclude?
 	11. Interpret the coefficient estimate for the *second* regression *with* weights. If you were consulting CER on the effectiveness of the `C4` treatment, what would you conclude?
 	12. Do you think, given how biased the data was, that the weighted regression coefficient estimate on treatment-trial are believable? Please be concise.
+
 
 ## Grading
 
