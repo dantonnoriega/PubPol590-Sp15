@@ -35,7 +35,8 @@ This section is **UNGRADED** but one must learn this part to do the next section
 3. **Answer the following questions in a separate document (.txt, .md preferred):**
 	1. Is there evidence of imbalance? Defend your claims by using the LOGIT output AND the Quick Means Comparison output.
 	2. Compare what variables are considered significant (if any) in the Logit imbalance test versus the "Quick Means Comparison". Are the results different? If so, what do you think is driving the differences?
-	3. What do you think are the pros and cons of each imbalance check (Logit and Quick Means).
+	3. What do you think are the pros and cons of each imbalance check (Logit and Quick Means)?
+	4. Comment on the survey questions selected. Are there any you think are irrelevant or redundant? What variables do you are missing but should have been included? Please be concise.
 
 ## Section 2: Propensity Score Weighting
 
@@ -123,17 +124,17 @@ logit_results, df_logit = do_logit(df_pretrial, 'B', '3', add_D=None, mc=False)
 
 To receive credit, you must push a *folder* with your python code to your team repo. *Please CLEARLY identify which folder and files are to be graded!*
 
-|Criteria 								| 	20 pts  	|
+|Criteria 								| 	25 pts  	|
 |---------------------------------------|---------------|
 |Easy to read code 						|	**2**  		|
-|Runs Out-of-the-Box					|	**2**		|
+|Runs Out-of-the-Box					|	**3**		|
 |**Section 1**                      	|  				|
-|		 -- Well reasoned, concise responses to 3 prompts    | 	**5**	|
+|		 -- Well reasoned, concise responses to 3 prompts    | 	**8**	|
 |**Section 2**                      	|  					|
 |		 -- Generate correct weights		| 	**2**	|
 |**Section 3**                      	|  					|
 |		 -- Generate correct `y` and `X`		| 	**2**	|
-|		 -- Well reasoned, concise responses to 4 prompts	| 	**7**	|
+|		 -- Well reasoned, concise responses to 4 prompts	| 	**8**	|
 
 
 Long, incoherent responses will be *penalized*.
