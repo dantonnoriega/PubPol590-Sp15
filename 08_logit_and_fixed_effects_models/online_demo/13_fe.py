@@ -65,7 +65,6 @@ df_dm = demean(df, cols, 'panid')
 mu = pd.get_dummies(df['ym'], prefix = 'ym').iloc[:, 1:-1]
 y = df_dm['log_kwh']
 X = df_dm[['TP', 'P']]
-X = sm.add_constant(X)
 
 ## run model
 fe_model = sm.OLS(y, pd.concat([X, mu], axis = 1))
