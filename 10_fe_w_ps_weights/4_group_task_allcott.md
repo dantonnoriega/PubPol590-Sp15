@@ -26,7 +26,7 @@ This section is **UNGRADED** but one must learn this part to do the next section
 
 ## Section 1: Finding Imbalance
 
-**IMPORTANT**: I intentionally *BIASED* the data used in sections 1-3. *The results here have no bearing on the real experiment.*
+>**IMPORTANT**: I intentionally *BIASED* the data used in sections 1-3. *Results in these sections have nothing to do with real CER experiment.*
 
 1. Download the file `task_4_kwh_w_dummies_wide.csv` [**here**][2]. Note that there is only ONE treatment group, `C4`. Also, note that a specific subset of dummy variables was pre-selected. The selected variables are listed in `RESIDENTIAL PRE TRIAL SURVEY_EDITED.docx` [**here**][2].
 2. Repeat the procedure from Section 0.
