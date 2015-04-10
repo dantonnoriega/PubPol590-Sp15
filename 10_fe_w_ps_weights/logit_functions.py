@@ -103,7 +103,7 @@ def do_logit(df, tar, stim, add_D=None, mc=False):
 
     y = df1['T']
     X = df1[cols] # extend list of kwh names
-    X = sm.add_constant(X)
+    X['const'] = 1 # bug fixed
 
     msg = ("\n\n\n\n\n-----------------------------------------------------------------\n"
     "LOGIT where Treatment is Tariff = %s, Stimulus = %s"
