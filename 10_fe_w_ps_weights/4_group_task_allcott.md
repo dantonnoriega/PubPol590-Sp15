@@ -129,7 +129,7 @@ To receive credit, you must push a *folder* with your python code to your team r
 |Easy to read code 						|	**2**  		|
 |Runs Out-of-the-Box					|	**3**		|
 |**Section 1**                      	|  				|
-|		 -- Well reasoned, concise responses to 3 prompts    | 	**8**	|
+|		 -- Well reasoned, concise responses to 4 prompts    | 	**8**	|
 |**Section 2**                      	|  					|
 |		 -- Generate correct weights		| 	**2**	|
 |**Section 3**                      	|  					|
