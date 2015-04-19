@@ -84,11 +84,11 @@ logit_results, df_logit = do_logit(df_pretrial, 'B', '3', add_D=None, mc=False)
 
 7. Set up your regression variables from the merge dataframe:
 	1. `y` = log of consumption
-	2. `T` = treatment variable
+	2. `P` = pre-trial/trial indicator
 	3. `TP` = treatment and trial period interaction
 	4. `w` = weights variable e.g. `w = df['w']`
 	2. `mu` = dummy variable matrix --- the seasonality controls. Use the `.iloc` method to omit the first column of dummies to avoid the *dummy variable trap* and the last column to reduce *multicollinearity* e.g. `	mu = pd.get_dummies(df['ym'], prefix = 'ym').iloc[:, 1:-1]`. Note that the first part,`[:,` means "take all rows"; the second part `, 1:-1]` means "from second column to the second-to-last". More detailed info available on indexing [**here**](http://pandas.pydata.org/pandas-docs/version/0.15.2/indexing.html).
-	4. Concatenate `T`, `TP`, and `mu` into one dataframe called `X` e.g. `X = pd.concat([TP, P, mu], axis=1)`
+	4. Concatenate `P`, `TP`, and `mu` into one dataframe called `X` e.g. `X = pd.concat([TP, P, mu], axis=1)`
 6. De-mean `y` and `X` using the function `demean`
 	7. Create a columns of IDs e.g. `ids = df['ID']`
 	8. Demean `y` and `X` e.g. `y = demean(y, ids)`. Note that the first argument is the variable to demean and the second is the ID vector.
