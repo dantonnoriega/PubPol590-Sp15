@@ -117,7 +117,7 @@ logit_results, df_logit = do_logit(df_pretrial, 'B', '3', add_D=None, mc=False)
 	10. Compare the coefficient estimates of the treatment-trial interaction variable. How did it change after using the weights?
 	11. Interpret the coefficient estimate for the *first* regression *without* weights. If you were consulting CER on the effectiveness of the `C4` treatment, what would you conclude?
 	11. Interpret the coefficient estimate for the *second* regression *with* weights. If you were consulting CER on the effectiveness of the `C4` treatment, what would you conclude?
-	12. Do you think, given how biased the data was, that the weighted regression coefficient estimate on treatment-trial are believable? Please be concise.
+	12. Do you think, given the data was biased, that the weighted regression coefficient estimate on treatment-trial are believable? Please be concise.
 
 
 ## Grading
