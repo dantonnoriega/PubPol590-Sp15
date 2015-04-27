@@ -54,4 +54,4 @@ end = time.time()
 print 'total time series correction...', end - start, 'seconds'
 
 # EXPORT ------------------
-df_ts.to_csv(root + "timeseries_correction.csv")
+df_ts.to_csv(root + "timeseries_correction.csv", index=False)
