@@ -27,7 +27,7 @@ for i in tariffs:
     for j in stimuli:
         # dummy vars must start with "D_" and consumption vars with "kwh_"
         logit_results, df_logit = do_logit(df_pretrial, i, j, add_D=None, mc=False)
-        
+
 # QUICK MEANS COMPARISON WITH T-TEST BY HAND----------
 # create means
 grp = df_logit.groupby('tariff')
