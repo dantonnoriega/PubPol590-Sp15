@@ -40,7 +40,7 @@ Reproduce the following 2 graphs (does not have to be exactly the same -- the da
 
 ## Hints
 
-1. You can find hints in the [**latest online demo**](https://www.dropbox.com/sh/ccrvzpz5ynym5gn/AACV-MjrL9X01TSBkfLl3CQLa?dl=0) on aggregating.
+1. You can find hints in the [**latest online demo**](https://www.dropbox.com/sh/id7fcz1b8jfc94d/AAAHcsY3oPOjImBRF2WPBar4a?dl=0) on aggregating.
 2. The dataset `timeseries_correction.csv` located at `06_aggregating_plotting/data/timeseries_correction.csv` on github, used correctly, can help trim a lot of the odd date issues in the CER data.
 3. Here is a snippet of code from my practice file located on github in `/06_aggregating_plotting/codes/dans_practice/9_aggregating.py`. Compared to the code used in the online demo, I use a 'Year-Month-Day' (aka 'ymd') date format for each day, instead of the tuple `(year, month, day)`:
 
